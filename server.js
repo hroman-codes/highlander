@@ -3,3 +3,7 @@ var app = express();
 
 app.use(express.static('public'));
 app.listen(process.env.PORT || 8080);
+
+// export default app; <==== es6 version
+
+module.exports = app; //CommonJS
