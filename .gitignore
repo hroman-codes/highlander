@@ -1,0 +1,13 @@
+# dependencies
+node_modules
+
+# testing
+.travis.yml
+test-blog-posts
+
+# misc
+.DS_Store
+.env
+npm-debug.log
+pseudo.md
+config.js
