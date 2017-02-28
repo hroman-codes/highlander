@@ -1,0 +1,28 @@
+{
+  "team": [
+    {
+      "id": "1",
+      "coach_id": "1",
+      "name": "Highlander",
+      "location": "South Bronx",
+    },
+    {
+      "id": "2",
+      "coach_id": "1",
+      "name": "Gem Stars",
+      "location": "Queens",
+    },
+    {
+      "id": "3",
+      "coach_id": "2",
+      "name": "Warriors",
+      "location": "Brooklyn",
+    },
+    {
+      "id": "4",
+      "coach_id": "2",
+      "name": "Tigers",
+      "location": "South Bronx",
+    }
+  ]
+}

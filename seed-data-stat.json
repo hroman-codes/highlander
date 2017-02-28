@@ -1,0 +1,24 @@
+{
+    "user_id": "1",
+    "stats_catalog_id": "2",
+    "how_many": "5",
+    "game_date": "27-02-2017"
+    },
+  {
+    "user_id": "1",
+    "stats_catalog_id": "2",
+    "how_many": "5",
+    "game_date": "27-02-2017"
+  },
+  {
+    "user_id": "2",
+    "stats_catalog_id": "3",
+    "how_many": "5",
+    "game_date": "27-02-2017"
+  },
+  {
+    "user_id": "2",
+    "stats_catalog_id": "4",
+    "how_many": "5",
+    "game_date": "27-02-2017"
+  },

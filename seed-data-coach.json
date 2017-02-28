@@ -1,0 +1,20 @@
+{
+  "coach": [
+    {
+      "id": "1",
+      "firstName": "Isaac",
+      "lastName": "Brewman",
+      "email": "isaac@gmail.com",
+      "phoneNumber": "123-456-1234",
+      "mobileProvider": "sprint"
+    },
+    {
+      "id": "2",
+      "firstName": "Danny",
+      "lastName": "Perez",
+      "email": "danny@gmail.com",
+      "phoneNumber": "123-456-7891",
+      "mobileProvider": "att"
+    }
+  ]
+}
