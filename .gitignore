@@ -10,3 +10,4 @@ test-blog-posts
 npm-debug.log
 pseudo.md
 config.js
+DBSetup.ms

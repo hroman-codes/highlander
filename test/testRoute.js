@@ -18,5 +18,4 @@ describe('root html test', function() {
       res.should.be.html;
       // done();
     })
-  })
 })
