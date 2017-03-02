@@ -12,7 +12,8 @@
     "bookshelf": "^0.10.3",
     "express": "^4.14.1",
     "knex": "^0.12.7",
-    "pg": "^6.1.2"
+    "pg": "^6.1.2",
+    "sqlite3": "^3.1.8"
   },
   "devDependencies": {
     "chai": "^3.5.0",
