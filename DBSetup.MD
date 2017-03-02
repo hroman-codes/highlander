@@ -20,17 +20,15 @@ id    first_name    last_name
   first_name: string,
   last_name: string,
   email: string
-  phone_number: string
-  mobile_provider: string
 }
 
 - table representation of players json object
 players <=== name of table
-id  first_name    last_name    email              phone_number    mobile_provider
-1   Heriberto    Roman         joe@gmail.com      123-456-7890    Sprint                
-2   Randy        Brown         joe@gmail.com      123-456-7890    Sprint
-3   Big          Mac           joe@gmail.com      123-456-7890    Sprint
-4   Ricardo      Roman         joe@gmail.com      123-456-7890    Sprint
+id    first_name    last_name     email               
+1     Heriberto     Roman         joe@gmail.com                       
+2     Randy         Brown         joe@gmail.com        
+3     Big           Mac           joe@gmail.com       
+4     Ricardo       Roman         joe@gmail.com    
 
 ===============================
 - seed teams json object
@@ -50,13 +48,13 @@ id   name         location        coach_id
 4    Tigers       Bronx, NY       2                               
 
 ===============================
-- seed team_association json object
+- seed team_associations json object
 {
   team_id: number,
   player_id: number
 }
 
-- table representation of team_association json object
+- table representation of team_associations json object
 team_association <=== name of table
 team_id   player_id
 1         4         
@@ -66,14 +64,14 @@ team_id   player_id
 3         3
 
 ===============================
-- seed stats_catalog json object
+- seed stat_catalogs json object
 {
   id: number,
   description: string
 }
 
 - table representation of stats_catalog json object
-stats_catalog <=== name of table
+stat_catalogs <=== name of table
 id   description
 1    hits
 2    atBats
@@ -93,7 +91,7 @@ id   description
 
 - table representation of stats json object
 stats <=== name of table
-player_id   stats_catalog_id    how_many    game_date // change this to dattime
+player_id   stat_catalog_id    how_many    game_date
   1         2                   5           16-06-2017 12:00:00
   1         3                   10          27-02-2017
   1         3                   8           7-03-2017

@@ -5,9 +5,10 @@ exports.up = function(knex, Promise) {
       table.increments('id').primary();
       table.string('name');
       table.string('location');
-      table.integer('coach_id').unsigned(); // i read some where that you need to call the unsigned() before .references()
+      table.integer('coach_id').unsigned();
       table.foreign('coach_id').references('Coaches.id');
-      table.timestamps(true, true); // date time
+      table.dateTime('game_date');
+      table.timestamps(true, true);
     })
   ]);
 };

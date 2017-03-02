@@ -1,9 +1,8 @@
 var express = require('express');
 var app = express();
+var db = require('./db');
 
 app.use(express.static('public'));
 app.listen(process.env.PORT || 8080);
-
-// export default app; <==== es6 version
 
 module.exports = app; //CommonJS

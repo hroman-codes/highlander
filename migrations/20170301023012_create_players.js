@@ -2,12 +2,11 @@
 exports.up = function(knex, Promise) {
   return Promise.all([
     knex.schema.createTable('players', function(table) {
-      table.increments();
-      table.string('firstName');
-      table.string('lastName');
+      table.increments('id').primary();
+      table.string('first_name');
+      table.string('last_name');
       table.string('email');
-      table.string('string');
-      table.string('mobileProvider');
+      table.timestamps(true, true);
     })
   ])
 };
