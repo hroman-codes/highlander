@@ -1,4 +1,4 @@
-// Update with your config settings.
+// var db = (process.env.NODE_ENV === 'test') ? 'booksshelf_test' : 'bookshelf' <========= Wences is this needed?
 
 module.exports = {
 
@@ -41,5 +41,4 @@ module.exports = {
       tableName: 'knex_migrations'
     }
   }
-
 };
