@@ -1,4 +1,3 @@
-
 exports.up = function(knex, Promise) {
   return Promise.all([
     knex.schema.createTable('teams', function(table){
@@ -6,7 +5,8 @@ exports.up = function(knex, Promise) {
       table.string('name');
       table.string('location');
       table.integer('coach_id').unsigned();
-      table.foreign('coach_id').references('Coaches.id');
+      table.foreign('coach_id').references('Coaches.id').inTable('Coaches');
+
       table.dateTime('game_date');
       table.timestamps(true, true);
     })
