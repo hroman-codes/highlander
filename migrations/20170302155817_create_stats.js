@@ -8,7 +8,7 @@ exports.up = function(knex, Promise) {
       table.integer('how_many');
       table.datetime('game_date');
     })
-  ])
+  ]);
 };
 
 exports.down = function(knex, Promise) {

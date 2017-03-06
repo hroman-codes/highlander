@@ -11,7 +11,7 @@ var Team = bookshelf.Model.extend({
   }
 });
 
-// do I put team assoicaton here?
+// put team assoicaton here
 
 
 module.exports = Bookshelf.model('Team', Team);

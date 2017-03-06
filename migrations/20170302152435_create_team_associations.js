@@ -6,7 +6,7 @@ exports.up = function(knex, Promise) {
       table.integer('player_id').unsigned();
       table.foreign('player_id').references('id').inTable('players');
       table.timestamps(true, true);
-    });
+    })
   ]);
 };
 

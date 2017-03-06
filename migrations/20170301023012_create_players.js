@@ -1,16 +1,17 @@
 exports.up = function(knex, Promise) {
   return Promise.all([
-    knex.schema.createTable('coaches', function (table) {
+    knex.schema.createTable('players', function(table) {
       table.increments('id').primary();
       table.string('first_name');
       table.string('last_name');
+      table.string('email');
       table.timestamps(true, true);
-    });
+    })
   ]);
 };
 
 exports.down = function(knex, Promise) {
   return Promise.all([
-    knex.schema.dropTable('coaches')
+    knex.schema.dropTable('players')
   ]);
 };
