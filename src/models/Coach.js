@@ -1,9 +1,9 @@
-// var knex = require ({ client: 'pg', connection: process.env.PG_CONNECTION_STRING });
+'use strict';
 var Bookshelf = require('../config/bookshelf.config');
 
 var Coach = Bookshelf.Model.extend({
   tableName: 'coaches',
-  team: function() {
+  teams: function() {
     return this.hasMany('Team');
   }
 });

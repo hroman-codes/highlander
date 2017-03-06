@@ -1,20 +1,17 @@
-// var db = (process.env.NODE_ENV === 'test') ? 'booksshelf_test' : 'bookshelf' <========= Wences is this needed?
-
 module.exports = {
 
   development: {
-    client: 'postgresql',
+    client: 'sqlite3',
     connection: {
       filename: './dev.sqlite3'
-      // database: 'highlander'
     }
   },
 
   staging: {
     client: 'postgresql',
     connection: {
-      database: 'my_db',
-      user:     'username',
+      database: 'highlander',
+      user:     'iamromanh',
       password: 'password'
     },
     pool: {
@@ -29,7 +26,7 @@ module.exports = {
   production: {
     client: 'postgresql',
     connection: {
-      database: 'my_db',
+      database: 'highlander',
       user:     'username',
       password: 'password'
     },

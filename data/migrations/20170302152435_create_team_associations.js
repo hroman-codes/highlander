@@ -1,11 +1,10 @@
 exports.up = function(knex, Promise) {
   return Promise.all([
     knex.schema.createTable('team_associations', function(table) {
-      // table.increments('team_id').primary(); <== no primary key so no need for this right?
       table.integer('team_id').unsigned();
-      table.foreign('team_id').references('teams.id');
+      table.foreign('team_id').references('id').inTable('teams');
       table.integer('player_id').unsigned();
-      table.foreign('player_id').references('players.id');
+      table.foreign('player_id').references('id').inTable('players');
       table.timestamps(true, true);
     });
   ]);
