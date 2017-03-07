@@ -1,7 +1,7 @@
 exports.seed = function (knex, Promise) {
-  return knex('team_association').del()
+  return knex('team_associations').del()
   .then(function () {
-    return knex('team_association').insert([
+    return knex('team_associations').insert([
       {team_id: 1, player_id: 4},
       {team_id: 2, player_id: 3},
       {team_id: 3, player_id: 2},

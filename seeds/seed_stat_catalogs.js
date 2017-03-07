@@ -1,7 +1,7 @@
 exports.seed = function (knex, Promise) {
-  return knex('stats_catalog').del()
+  return knex('stat_catalogs').del()
   .then(function () {
-    return knex('teams').insert([
+    return knex('stat_catalogs').insert([
       {id: 1, description: 'Hits'},
       {id: 2, description: 'At Bats'},
       {id: 3, description: 'Home Runs'},
@@ -10,4 +10,4 @@ exports.seed = function (knex, Promise) {
       {id: 6, description: 'Strikeouts'}
     ]);
   });
-}; 
+};

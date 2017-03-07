@@ -5,7 +5,7 @@ exports.up = function(knex, Promise) {
       table.string('name');
       table.string('location');
       table.integer('coach_id').unsigned();
-      table.foreign('coach_id').reference('id').inTable('Coaches');
+      table.foreign('coach_id').references('id').inTable('Coaches');
       table.dateTime('game_date');
       table.timestamps(true, true);
     })
