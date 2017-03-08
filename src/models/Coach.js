@@ -1,4 +1,3 @@
-'use strict';
 var Bookshelf = require('../config/bookshelf.config');
 
 var Coach = Bookshelf.Model.extend({

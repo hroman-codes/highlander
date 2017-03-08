@@ -4,15 +4,19 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "mocha"
+    "start": "node server.js",
+    "test": "mocha",
+    "migrate": "knex migrate:latest"
   },
   "author": "Heriberto Roman",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.17.1",
     "bookshelf": "^0.10.3",
-    "express": "^4.14.1",
+    "express": "^4.15.2",
     "knex": "^0.12.7",
     "pg": "^6.1.2",
+    "sqlite": "^2.3.0",
     "sqlite3": "^3.1.8"
   },
   "devDependencies": {

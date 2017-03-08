@@ -11,6 +11,15 @@ var Team = bookshelf.Model.extend({
   }
 });
 
+var Team_Association = bookshelf.Model.extend({
+  tableName: 'team_associations',
+  team: function() {
+    return this.belongsTo
+  },
+  player: function() {
+    return this.belongsTo
+  }
+})
 // put team assoicaton here
 
 

@@ -55,7 +55,7 @@ id   name         location        coach_id
 }
 
 - table representation of team_associations json object
-players_teams <=== name of table***********
+players_teams <=== name of table
 team_id   player_id
 1         4         
 2         3
@@ -89,7 +89,7 @@ id   description
   game_date: timestamp
 }
 
-- table representation of stats json object ***************
+- table representation of stats json object
 players_stat_catalogs <=== name of table
 player_id   stat_catalog_id    how_many    game_date
   1         2                   5           16-06-2017 12:00:00
@@ -101,7 +101,7 @@ player_id   stat_catalog_id    how_many    game_date
 
 NOTE:
 // this is not a table but rather the computation. i.e sits in route and presented in the front end
-average_category //
+stat_catalogs //
   battingAverage
     | hits = SELECT sum(how_many) FROM stats WHERE user_id =1 AND stats_catalog_id=1;
     | atBats = SELECT sum(how_many) FROM stats WHERE user_id =1 AND stats_catalog_id=2;
@@ -127,15 +127,3 @@ Focus on creating players, coaches, and teams endpoint
 and how can I get the relationship between each one.
 
 Register as coach and player and see the relationship between them.
-
-
-#Next
-Setup my knexfile.js
-run migration file
-then seed
-the play with Sqlite UI
-
-- test models
-
-Setup routers
-- do all GETS first
