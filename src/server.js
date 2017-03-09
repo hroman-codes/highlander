@@ -8,20 +8,7 @@ const playerRouter = require('./routes/playerRouter');
 app.use(morgan('common'));
 // app.use(express.static('public'));
 
-app.use('/player', playerRouter);
-
-function runServer() {
-  const port = process.env.PORT || 8080;
-  return new Promise((resolve, reject) => {
-    app.listen(port, () => {
-      console.log(`Your app is listening on port ${port}`);
-      resolve();
-    })
-    .on('error', err => {
-      reject(err)
-    });
-  });
-}
+app.use('/players', playerRouter);
 
 let server;
 

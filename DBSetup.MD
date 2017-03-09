@@ -62,6 +62,7 @@ team_id   player_id
 3         2
 4         4
 3         3
+1         2
 
 ===============================
 - seed stat_catalogs json object
