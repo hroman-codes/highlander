@@ -10,6 +10,7 @@ app.use(morgan('common'));
 
 app.use('/players', playerRouter);
 
+
 let server;
 
 function runServer() {

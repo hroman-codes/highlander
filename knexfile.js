@@ -1,9 +1,10 @@
 module.exports = {
-
   development: {
-    client: 'sqlite3',
+    client: 'postgresql',
     connection: {
-      filename: './dev.sqlite3'
+      database: 'highlander',
+      user: 'iamromanh',
+      password: 'bananabanana99'
     },
     migrations: {
       directory: 'data/migrations'
@@ -11,7 +12,8 @@ module.exports = {
     seeds: {
       directory: 'data/seeds'
     },
-    useNullAsDefault: true
+    debug: true,
+    useNullAsDefault: true,
   },
 
   staging: {
@@ -37,9 +39,9 @@ module.exports = {
   production: {
     client: 'postgresql',
     connection: {
-      database: 'highlander',
-      user:     'username',
-      password: 'password'
+      database: 'postgres://ec2-23-23-223-2.compute-1.amazonaws.com:5432/d1dmfln8ki4jln',
+      user: 'dgeblrjcmnovie',
+      password: '99a1fcce2305b622eab57f7d7dc5a022da3dc7f802d736cc3b4dcff24f75ebee'
     },
     pool: {
       min: 2,
@@ -53,4 +55,4 @@ module.exports = {
       directory: 'data/seeds'
     }
   }
-};
+}

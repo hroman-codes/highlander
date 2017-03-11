@@ -18,4 +18,5 @@ var Player = Bookshelf.Model.extend({
   },
 });
 
-module.exports = Bookshelf.model('Player', Player);
+// module.exports = Bookshelf.model('Player', Player);
+module.exports = Player;
