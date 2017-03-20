@@ -1,10 +1,19 @@
-var Bookshelf = require('../config/bookshelf.config');
+const Bookshelf = require('../config/bookshelf.config');
 
-var Coach = Bookshelf.Model.extend({
+const Team = require('./Team');
+const Player = require('./Player');
+
+const Coach = Bookshelf.Model.extend({
   tableName: 'coaches',
+  coach: function() {
+    return this.belongsToMany(Coach, 'coaches_teams')
+  },
   teams: function() {
-    return this.hasMany('Team');
+    return this.belongsToMany(Team, 'coaches_teams');
   }
+  // players: function() {
+  //   return this.belongsToMany(Player, 'teams_players');
+  // }
 });
 
-module.exports = Bookshelf.model('Coach', Coach);
+module.exports = Coach;

@@ -4,12 +4,16 @@ const morgan = require('morgan');
 const app = express();
 
 const playerRouter = require('./routes/playerRouter');
+const coachRouter = require('./routes/coachRouter');
+const teamRouter = require('./routes/teamRouter');
+const statRouter = require('./routes/statRouter');
 
 app.use(morgan('common'));
-// app.use(express.static('public'));
 
 app.use('/players', playerRouter);
-
+app.use('/coaches', coachRouter);
+app.use('/teams', teamRouter);
+app.use('/stats', statRouter);
 
 let server;
 

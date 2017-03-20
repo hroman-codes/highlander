@@ -4,7 +4,8 @@ module.exports = {
     connection: {
       database: 'highlander',
       user: 'iamromanh',
-      password: 'bananabanana99'
+      password: 'bananabanana99',
+      charset: 'utf8'
     },
     migrations: {
       directory: 'data/migrations'

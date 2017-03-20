@@ -9,7 +9,7 @@
 
 - table representation of coaches json object
 coaches <=== name of table
-id    first_name    last_name
+id    first_name    last_name     email
 1     Isaac         Brewman
 2     Danny         Diaz
 
