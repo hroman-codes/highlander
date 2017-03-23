@@ -1,9 +1,17 @@
-var Bookshelf = require('../config/bookshelf.config');
-var Player = Bookshelf.Model.extend({
+const Bookshelf = require('../config/bookshelf.config');
+
+require('./Team');
+require('./Stat_Catalog');
+require('./Stat');
+
+const Player = Bookshelf.Model.extend({
   tableName: 'players',
-  teams: function() { 
-    return this.belongsToMany(Team);
+  teams: function() {
+    return this.belongsToMany('Team', 'teams_players');
   },
+  stats: function() {
+    return this.hasMany('Stat');
+  }
 });
 
-module.exports = Player;
+module.exports = Bookshelf.model('Player', Player);

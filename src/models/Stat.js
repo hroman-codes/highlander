@@ -1,20 +1,15 @@
-var Bookshelf = require('../config/bookshelf.config');
+const Bookshelf = require('../config/bookshelf.config');
 
-var Stat = Bookshelf.Model.extend({
+require('./Stat_Catalog');
+
+const Stat = Bookshelf.Model.extend({
   tableName: 'stats',
-  players: function() {
-    return this.belongsTo(Player)
+  player: function() {
+    return this.belongsTo('Player')
   },
-  catalog: function(){
-    return this.hasOne(Stat_Catalog)
+  catalog: function() {
+    return this.belongsTo('Stat_Catalog')
   }
 })
 
-var Stat_Catalog = Bookshelf.Model.extend({
-  tableName: 'stat_catalogs',
-  stat: function() {
-    return this.belongsToMany(Player, 'stats')
-  }
-});
-
-module.exports = {Stat, Stat_Catalog};
+module.exports = Bookshelf.model('Stat', Stat);
