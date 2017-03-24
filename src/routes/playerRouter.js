@@ -94,16 +94,7 @@ router.put('/:id', function(req, res) {
  //   })
  // })
 
- Player.forge({
-      firstname: ...,
-     lastname: ...
-    })
-    .save()
-    .then(function (player) {
-     //send 200 response
-})
-
- router.post('/', function(req, res) {
+ router.post('/:id', function(req, res) {
    const postParams = ['email', 'first_name', 'last_name'];
    for (var i = 0; i < postParams.length; i++) {
      const confirmPostParams = postParams[i];
@@ -117,10 +108,16 @@ router.put('/:id', function(req, res) {
    Player
    .forge({
      email: req.body.email,
-     first_name:
+     first_name: req.body.first_name,
+     last_name: req.body.last_name
+   })
+   .save()
+   .then(function(player) {
+     return res.status(200).json(player);
+   })
+   .catch(function(err) {
+     return res.status(500).json(err);
    })
  })
-
-
 
 module.exports = router;
