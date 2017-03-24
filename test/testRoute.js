@@ -16,7 +16,6 @@ describe('root html test', function() {
 
       res.status.should.be(200);
       res.should.be.html;
-      // done();
     })
   })
 })
