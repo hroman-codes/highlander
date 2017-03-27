@@ -57,4 +57,29 @@ router.put('/:id', function(req, res) {
   })
 })
 
+router.post('/:id', function(req, res) {
+  const postParams = ['name', 'location'];
+  for (var i = 0; i < postParams.length; i++) {
+    const confirmPostParams = postParams[i];
+    if(!(confirmPostParams in req.body)) {
+      const errorMessage = `Sorry your missing ${confirmedParams} please try again`
+      console.error(errorMessage);
+      return res.status(400).send(errorMessage);
+    }
+  }
+
+  Team
+  .forge({
+    name: req.body.name,
+    location: req.body.location
+  })
+  .save()
+  .then(function(team) {
+    return res.status(200).json(team);
+  })
+  .catch(function(err) {
+    return res.status(500).json(err);
+  })
+})
+
 module.exports = router;
