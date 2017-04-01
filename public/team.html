@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/dashboard.js"></script>
+    <script src="js/team.js"></script>
   </head>
 <body>
     <!-- Navigation -->
@@ -66,13 +66,12 @@
             </a>
           </div>
           <div class="column is-4">
-            <!-- <p class="userProfileData"></p> -->
             <p>
-              <span class="title is-bold profile-title coach-fullname"></span>
+              <span class="title is-bold profile-title">Isaac Brewman</span>
             </p>
             <p>
-              <span class="tagline profile-metadata coach-email"></span>
-            </p> -->
+              <span class="tagline profile-metadata">isaac@gmail.com</span>
+            </p>
           </div>
         </div>
       </div>
@@ -83,14 +82,14 @@
 <section class="coach-dashboard-menu">
   <div class="tabs is-toggle is-fullwidth is-medium">
     <ul>
-      <li class="is-active">
-        <a>
+      <li>
+        <a href="dashboard.html">
           <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
           <span>Dashboard</span>
         </a>
       </li>
-      <li>
-        <a href="team.html">
+      <li class="is-active">
+        <a href="team.html" class="button-color forlife">
           <span class="icon"><i class="fa fa-futbol-o" aria-hidden="true"></i></span>
           <span>Team</span>
         </a>
@@ -110,7 +109,7 @@
       <li>
         <a>
           <span class="icon"><i class="fa fa-bar-chart" aria-hidden="true"></i></span>
-          <span>Stats</span>
+          <span>Stats</span>``
         </a>
       </li>
       <li>
@@ -128,16 +127,22 @@
     <div class="tile is-ancestor">
       <div class="tile is-4 is-vertical is-parent">
         <div class="tile is-child box">
-          <p class="title">Teams</p>
-          <ul class="teams-container"></ul>
+          <p class="title">Team</p>
+          <p class="team-name"></p>
+          <p class="team-location"></p>
         </div>
         <div class="tile is-child box">
-          <p class="title">Stats</p>
+          <p class="title">Coach</p>
+          <p class="coach-name"></p>
+          <p class="coach-email"></p>
         </div>
       </div>
       <div class="tile is-parent">
         <div class="tile is-child box">
           <p class="title">Roster</p>
+          <ul class="roster-details">
+          </ul>
+        </div>
       </div>
     </div>
   </div>

@@ -10,59 +10,202 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
   </head>
-  <body>
-    <nav class="nav has-shadow bar">
-      <div class="container">
-        <div class="nav-left">
-          <a class="nav-item">
-            <!-- <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo"> -->
-            <p class="logo">Highlander</p>
-          </a>
-        </div>
+<body>
+    <!-- Navigation -->
+<nav class="nav has-shadow bar">
+    <div class="container">
+      <div class="nav-left">
+        <a class="nav-item" href="index.html">
+          <p class="logo">Highlander</p>
+        </a>
+      </div>
 
         <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
         <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
-        <span class="nav-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
+      <span class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
 
         <!-- This "nav-menu" is hidden on mobile -->
         <!-- Add the modifier "is-active" to display it on mobile -->
-        <div class="nav-right nav-menu">
-          <a class="nav-item nav-color">
-            About
-          </a>
-          <a class="nav-item nav-color">
-            Contact
-          </a>
-          <a class="nav-item nav-color">
-            Blog
-          </a>
+      <div class="nav-right nav-menu">
+        <a class="nav-item nav-color">
+          About
+        </a>
+        <a class="nav-item nav-color">
+          Contact
+        </a>
+        <a class="nav-item nav-color">
+          Blog
+        </a>
 
-          <span class="nav-item">
-            <a class="button is-info is-outlined">
-              <span>Log In</span>
-            </a>
-            <a class="button is-success is-outlined">
-              <span>Sign up</span>
-            </a>
-        </span>
-        </div>
-      </div>
-  </nav>
-
-  <section class="hero is-primary is-large">
-    <div class="hero-body bg-img">
-      <div class="container">
-        <h1 class="title">
-          A Simple App With Powerful Team Management Features Try It Free, and Discover How Much Time You'll Save Each Week.
-        </h1>
+        <span class="nav-item">
+          <a class="button is-info is-inverted is-outlined" href="login.html">
+            <span>Log In</span>
+          </a>
+          <a class="button is-success is-inverted is-outlined" href="register.html">
+            <span>Sign up</span>
+          </a>
+      </span>
       </div>
     </div>
-  </section>
+</nav>
 
+  <!-- Hero -->
+<section class="hero is-medium">
+  <div class="hero-body bg-img">
+    <div class="container container-hero">
+      <h1 class="title title-hero has-text-centered">
+        A Simple App With Easy To Use Team Management Features
+        <br>
+        Try It, and Discover How Much Time You'll Save Each Week.
+      </h1>
+    </div>
+
+    <p class="hero-buttons">
+      <a class="button is-info is-medium is-inverted is-outlined" href="login.html">Log In</a>
+      <a class="button is-success is-medium is-inverted is-outlined" href="register.html">Sign Up</a>
+    </p>
+</section>
+
+  <!-- Coach and Player Cards -->
+<section class="section afterHeroSection">
+  <div class="container">
+      <div class="columns level">
+        <div class="column is-5">
+          <div class="content">
+            <h1>Manage Your Profile with Ease</h1>
+            <p>
+              As coach experience the simple way to manage teams, players, and player stats.</br>
+            </p>
+            <p>
+              As a player find your team and updated stats, also do a little trash talking to your teammates.
+            </p>
+          </div>
+        </div>
+
+        <div class="column is-3 is-offset-1">
+          <div class="card">
+            <div class="card-content">
+              <p class="has-text-centered">
+                <i class="fa fa-user-circle-o coach-card-icon" aria-hidden="true"></i>
+              </p>
+              <p class="title level-item">
+                Coach
+              </p>
+              <p class="has-text-centered">
+                <a class="button is-active is-1">
+                  <span class="icon is-small">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </span>
+                  <span>Create Team</span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-3">
+          <div class="card card-color">
+            <div class="card-content">
+              <p class="has-text-centered">
+                <i class="fa fa-user-circle coach-card-icon" aria-hidden="true"></i>
+              </p>
+              <p class="title level-item">
+                Team Member
+              </p>
+              <p class="has-text-centered">
+                <a class="button is-active is-1 is-outlined">
+                  <span class="icon is-small">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </span>
+                  <span>Find Team</span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- Average Promo -->
+<section class="section bg-image-average-promo">
+  <div class="container">
+      <div class="columns level has-text-centered">
+        <div class="column is-3 is-offset-1">
+          <div class="card">
+            <nav class="panel has-text-centered">
+              <p class="panel-heading">
+                Batting Average
+              </p>
+              <div class="panel-block panel-heading panel-heading-center">
+                <span>
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                    <!-- <p class="averagePlayerName">Randy Brown</p>
+                    <p>.428</p> -->
+                    Randy Brown .428
+                </span>
+              </div>
+              <div class="panel-block panel-heading panel-heading-center">
+                <span>
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                    <!-- <p class="averagePlayerName">Kris Big-Mac</p>
+                    <p>.407</p> -->
+                    Kris Big-Mac .407
+                </span>
+              </div>
+              <div class="panel-block panel-heading panel-heading-center">
+                <span>
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                    <!-- <p class="averagePlayerName">Eddie Roman</p>
+                    <p>.389</p> -->
+                    Eddie Roman .389
+                </span>
+              </div>
+              <div class="panel-block panel-heading panel-heading-center">
+                <span>
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                    <!-- <p class="averagePlayerName">Eddie Roman</p>
+                    <p>.389</p> -->
+                    Ricardo Roman .323
+                </span>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <div class="column is-5 is-offset-2">
+          <div class="content" id="averageText">
+            <h1 id="averageH1Text">
+              Who Is on Top Of Thier Game?
+            </h1>
+            <p>
+              As coach and player brag about your team and player standings</br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Highlander</strong> by <a class="heribertoFooterName" href="https://iamromanh.github.io/heribertoResumeSite/index.html#"
+        >Heriberto Roman</a> made with <i class="fa fa-heart fa-2x heribertoHeart"></i>.
+      <p>
+      <p>
+        <a class="icon" href="https://github.com/iamromanh">
+          <i class="fa fa-github heribertoGithubIcon"></i>
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
 
   </body>
 </html>

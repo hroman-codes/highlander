@@ -9,12 +9,14 @@ const teamRouter = require('./routes/teamRouter');
 const statRouter = require('./routes/statRouter');
 
 app.use(morgan('common'));
+app.use(express.static('public'));
 
 app.use('/players', playerRouter);
 app.use('/coaches', coachRouter);
 app.use('/teams', teamRouter);
 app.use('/stats', statRouter);
 app.use('/stats',playerRouter);
+
 
 
 let server;
