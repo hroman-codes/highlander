@@ -3,7 +3,8 @@ exports.up = function(knex, Promise) {
     knex.schema.createTable('teams', function(table){
       table.increments('id').primary();
       table.string('name');
-      table.string('location');
+      table.string('city');
+      table.string('state');
       table.dateTime('game_date');
       table.timestamps(true, true);
     })

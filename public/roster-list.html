@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Highlander</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/team.js"></script>
+  </head>
+<body>
+    <!-- Navigation -->
+<nav class="nav has-shadow bar">
+    <div class="container">
+      <div class="nav-left">
+        <a class="nav-item" href="index.html">
+          <p class="logo">Highlander</p>
+        </a>
+      </div>
+
+        <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+        <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+      <span class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+
+        <!-- This "nav-menu" is hidden on mobile -->
+        <!-- Add the modifier "is-active" to display it on mobile -->
+      <div class="nav-right nav-menu">
+        <a class="nav-item nav-color is-tab">
+          Contact
+        </a>
+        <a class="nav-item is-tab nav-color">
+          Log out
+        </a>
+      </div>
+    </div>
+</nav>
+
+<section class="hero is-primary dashboard-bg-image">
+  <div class="hero-body">
+    <div class="container profile">
+      <div class="profile-heading">
+        <nav class="level">
+          <div class="level-left">
+            <div class="level-item">
+              <p>
+                <span class="title is-bold profile-title">
+                  Roster List
+                </span>
+              </p>
+            </div>
+          </div>
+          <div class="level-right">
+            <span class="level-item">
+              <a class="button is-primary is-outlined" href="add-player.html">
+                Add New Player
+              </a>
+            </span>
+          </div>
+        </nav>
+      </div>
+    </div>
+</div>
+</section>
+
+<section class="coach-dashboard-menu">
+  <div class="tabs is-toggle is-fullwidth is-medium">
+    <ul>
+      <li>
+        <a href="dashboard.html">
+          <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li class="is-active">
+        <a href="team.html" class="button-color forlife">
+          <span class="icon">
+            <i class="fa fa-futbol-o" aria-hidden="true"></i>
+          </span>
+          <span>Team</span>
+        </a>
+      </li>
+      <li>
+        <a href="roster.html">
+          <span class="icon">
+            <i class="fa fa-users" aria-hidden="true"></i>
+          </span>
+          <span>Roster</span>
+        </a>
+      </li>
+      <li>
+        <a>
+          <span class="icon">
+            <i class="fa fa-list-ol"></i>
+          </span>
+          <span>Stats</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="columns is-gapless">
+    <div class="column is-one-quarter">
+      <div class="card has-text-centered">
+        <div class="card-content" id="theTeamBg">
+          <p class="title">
+            Highlanders
+          </p>
+          <p class="subtitle">
+            Bronx, NY
+          </p>
+        </div>
+        <footer class="card-footer">
+          <p class="card-footer-item">
+            <span>
+              View <a href="#">Roster</a>
+            </span>
+          </p>
+          <p class="card-footer-item">
+            <span>
+              Edit <a href="#">Team</a>
+            </span>
+          </p>
+        </footer>
+      </div>
+    </div>
+
+    <div class="column is-one-quarter">
+      <div class="card has-text-centered">
+        <div class="card-content" id="theTeamBg">
+          <p class="title">
+            La Familia
+          </p>
+          <p class="subtitle">
+            Bronx, NY
+          </p>
+        </div>
+        <footer class="card-footer">
+          <p class="card-footer-item">
+            <span>
+              View <a href="#">Roster</a>
+            </span>
+          </p>
+          <p class="card-footer-item">
+            <span>
+              Edit <a href="#">Team</a>
+            </span>
+          </p>
+        </footer>
+      </div>
+    </div>
+
+    <div class="column is-one-quarter">
+      <div class="card has-text-centered">
+        <div class="card-content" id="theTeamBg">
+          <p class="title">
+            La Bomba
+          </p>
+          <p class="subtitle">
+            Bronx, NY
+          </p>
+        </div>
+        <footer class="card-footer">
+          <p class="card-footer-item">
+            <span>
+              View <a href="#">Roster</a>
+            </span>
+          </p>
+          <p class="card-footer-item">
+            <span>
+              Edit <a href="#">Team</a>
+            </span>
+          </p>
+        </footer>
+      </div>
+    </div>
+
+    <div class="column is-one-quarter">
+      <div class="card has-text-centered">
+        <div class="card-content" id="theTeamBg">
+          <p class="title">
+            Gem Stars
+          </p>
+          <p class="subtitle">
+            Bronx, NY
+          </p>
+        </div>
+        <footer class="card-footer">
+          <p class="card-footer-item">
+            <span>
+              View <a href="#">Roster</a>
+            </span>
+          </p>
+          <p class="card-footer-item">
+            <span>
+              Edit <a href="#">Team</a>
+            </span>
+          </p>
+        </footer>
+      </div>
+    </div>
+
+    <div class="column is-one-quarter">
+      <div class="card">
+        <div class="card-content">
+          <p class="title">
+            Gem Stars
+          </p>
+          <p class="subtitle">
+            Bronx, NY
+          </p>
+        </div>
+        <footer class="card-footer">
+          <p class="card-footer-item">
+            <span>
+              View <a href="#">Roster</a>
+            </span>
+          </p>
+          <p class="card-footer-item">
+            <span>
+              Edit <a href="#">Team</a>
+            </span>
+          </p>
+        </footer>
+      </div>
+    </div>
+  </div>
+</section>
+  </body>
+</html>

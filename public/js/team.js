@@ -22,7 +22,7 @@ $(document).ready(function() {
         $('.team-name').text(teamName);
         $('.team-location').text(teamLocation);
 
-        var coachName = data.coach[0].first_name + ' ' + data.coach[0].last_name;
+        var coachName = data.coach[0].first_name + ' ' + data.coach[].last_name;
         var coachEmail = data.coach[0].email;
 
         $('.coach-name').text(coachName);

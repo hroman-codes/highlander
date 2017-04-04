@@ -34,12 +34,6 @@
         <!-- Add the modifier "is-active" to display it on mobile -->
       <div class="nav-right nav-menu">
         <a class="nav-item nav-color is-tab">
-          Dashboard
-        </a>
-        <a class="nav-item nav-color is-tab">
-          Blog
-        </a>
-        <a class="nav-item nav-color is-tab">
           Contact
         </a>
         <!-- <a class="nav-item is-tab nav-color">
@@ -72,7 +66,7 @@
             </p>
             <p>
               <span class="tagline profile-metadata coach-email"></span>
-            </p> -->
+            </p>
           </div>
         </div>
       </div>
@@ -84,7 +78,7 @@
   <div class="tabs is-toggle is-fullwidth is-medium">
     <ul>
       <li class="is-active">
-        <a>
+        <a href="team.html">
           <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
           <span>Dashboard</span>
         </a>
@@ -96,27 +90,15 @@
         </a>
       </li>
       <li>
-        <a>
-          <span class="icon"><i class="fa fa-upload" aria-hidden="true"></i></span>
-          <span>Logo</span>
-        </a>
-      </li>
-      <li>
-        <a>
+        <a href="roster.html">
           <span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span>
           <span>Roster</span>
         </a>
       </li>
       <li>
         <a>
-          <span class="icon"><i class="fa fa-bar-chart" aria-hidden="true"></i></span>
-          <span>Stats</span>
-        </a>
-      </li>
-      <li>
-        <a>
           <span class="icon"><i class="fa fa-list-ol"></i></span>
-          <span>Leaderboard</span>
+          <span>Stats</span>
         </a>
       </li>
     </ul>
@@ -127,17 +109,93 @@
   <div class="container">
     <div class="tile is-ancestor">
       <div class="tile is-4 is-vertical is-parent">
-        <div class="tile is-child box">
-          <p class="title">Teams</p>
-          <ul class="teams-container"></ul>
+        <div class="tile is-child box header">
+          <nav class="level dashboard-title">
+            <div class="level-left">
+              <div class="level-item">
+                <span class="icon">
+                  <i class="fa fa-futbol-o icon-dasboard-placement" aria-hidden="true"></i>
+                </span>
+                <p>
+                  Teams
+                </p>
+              </div>
+            </div>
+            <div class="level-right">
+              <span class="level-item">
+                <a class="button is-primary is-outlined" href="team.html">
+                  Add New Team
+                </a>
+              </span>
+            </div>
+          </nav>
+          <ul class="teams-list-container">
+            <article class="message add-team-message">
+              <div class="message-body has-text-centered">
+                You dont have any teams.
+              </div>
+            </article>
+          </ul>
         </div>
-        <div class="tile is-child box">
-          <p class="title">Stats</p>
+
+        <div class="tile is-child box header">
+          <nav class="level dashboard-title">
+            <div class="level-left">
+              <div class="level-item">
+                <span class="icon icon-dasboard-placement">
+                  <i class="fa fa-list-ol" aria-hidden="true"></i>
+                </span>
+                <p>
+                  Stats
+                </p>
+              </div>
+            </div>
+            <div class="level-right">
+              <span class="level-item">
+                <a class="button is-primary is-outlined">
+                  Add New Stats
+                </a>
+              </span>
+            </div>
+          </nav>
+          <ul>
+            <article class="message">
+              <div class="message-body has-text-centered">
+                You dont have any Stats.
+              </div>
+            </article>
+          </ul>
         </div>
       </div>
-      <div class="tile is-parent">
-        <div class="tile is-child box">
-          <p class="title">Roster</p>
+
+    <div class="tile is-parent">
+      <div class="tile is-child box header">
+        <nav class="level dashboard-title">
+          <div class="level-left">
+            <div class="level-item">
+              <span class="icon icon-dasboard-placement">
+                <i class="fa fa-users" aria-hidden="true"></i>
+              </span>
+              <p>
+                Roster
+              </p>
+            </div>
+          </div>
+          <div class="level-right">
+            <span class="level-item">
+              <a class="button is-primary is-outlined" href="roster.html">
+                Add Players
+              </a>
+            </span>
+          </div>
+        </nav>
+        <ul>
+          <article class="message">
+            <div class="message-body has-text-centered">
+              You dont have a Roster.
+            </div>
+          </article>
+        </ul>
       </div>
     </div>
   </div>

@@ -138,6 +138,27 @@ div.panel-block.panel-heading.panel-heading-center {
 }
 
 /* ======================================
+  Global Dashboard
+========================================= */
+.dashboard-title {
+ border-bottom: 1px solid #e7e7e7;
+}
+
+nav.level.dashboard-title {
+  padding-bottom: 10px;
+}
+
+a.button.is-primary.dasboard {
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+.icon-dasboard-placement {
+  padding-right: 10px;
+}
+
+
+/* ======================================
   Coach Dashboard
 ========================================= */
 .dashboard-bg-image {
@@ -163,6 +184,13 @@ span.title.is-bold.profile-title {
 }*/
 
 /* ======================================
+  Teams Dashboard
+========================================= */
+#theTeamBg {
+  background-color: #FFFFFF;
+}
+
+/* ======================================
   Footer
 ========================================= */
 .heribertoFooterName {
@@ -176,20 +204,6 @@ span.title.is-bold.profile-title {
 .heribertoHeart {
   color: #FA5544;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

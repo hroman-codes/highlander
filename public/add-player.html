@@ -52,14 +52,14 @@
             <div class="level-item">
               <p>
                 <span class="title is-bold profile-title">
-                  Teams
+                  Add a new Team
                 </span>
               </p>
             </div>
           </div>
           <div class="level-right">
             <span class="level-item">
-              <a class="button is-primary is-outlined" href="add-team.html">
+              <a class="button is-primary is-outlined" title="Disabled button" disabled href="team.html">
                 Add New Team
               </a>
             </span>
@@ -79,27 +79,21 @@
           <span>Dashboard</span>
         </a>
       </li>
-      <li class="is-active">
+      <li>
         <a href="team.html" class="button-color forlife">
-          <span class="icon">
-            <i class="fa fa-futbol-o" aria-hidden="true"></i>
-          </span>
+          <span class="icon"><i class="fa fa-futbol-o" aria-hidden="true"></i></span>
           <span>Team</span>
         </a>
       </li>
-      <li>
+      <li class="is-active">
         <a href="roster.html">
-          <span class="icon">
-            <i class="fa fa-users" aria-hidden="true"></i>
-          </span>
+          <span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span>
           <span>Roster</span>
         </a>
       </li>
       <li>
         <a>
-          <span class="icon">
-            <i class="fa fa-list-ol"></i>
-          </span>
+          <span class="icon"><i class="fa fa-list-ol"></i></span>
           <span>Stats</span>
         </a>
       </li>
@@ -107,20 +101,52 @@
   </div>
 </section>
 
-<section class="hero is-medium is light">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title has-text-centered">
-         Save time producing your team on your score books, with a few
-         clicks you will save time registering players, adding teams and stats.
-         It's a one-stop shop for club & league management.
-      </h1>
-      <div class="level-center">
-        <span class="level-item">
-          <a class="button is-primary is-outlined" href="add-team.html">
-            Add New Team
-          </a>
-        </span>
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-half is-offset-one-quarter box">
+        <div class="field">
+          <label class="label">Select Team</label>
+          <p class="control">
+            <span class="select is-medium">
+              <select>
+                <option>Highlander</option>
+                <option>Gem Stars</option>
+              </select>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <label class="label">Email</label>
+          <p class="control">
+            <input class="input is-medium" type="email" placeholder="Email" id="email">
+          </p>
+        </div>
+          <div class="field">
+            <label class="label">First Name</label>
+            <p class="control">
+              <input class="input is-medium" type="text" placeholder="First Name" id="firstName">
+            </p>
+          </div>
+          <div class="field">
+            <label class="label">Last Name</label>
+            <p class="control">
+              <input class="input is-medium" type="text" placeholder="Last Name" id="lastName">
+            </p>
+          </div>
+          <div class="field">
+            <label class="label">Position</label>
+            <p class="control">
+              <input class="input is-medium" type="text" placeholder="Position" id="Position">
+            </p>
+          </div>
+          <div class="level">
+            <span class="level-item has-text-centered">
+              <a class="button is-primary is-outlined" href="team.html">
+                Add New Player
+              </a>
+            </span>
+          </div>
       </div>
     </div>
   </div>
