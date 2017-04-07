@@ -173,6 +173,16 @@ span.title.is-bold.profile-title {
   color: #4a4a4a;
 }
 
+footer.card-footer.panel-heading.dashboard-roster-footer {
+  padding: 0;
+}
+
+h1.title.coach-title.coach-heading-dashboard {
+  color: #4a4a4a;
+  margin-bottom: 2px;
+}
+
+
 /* ======================================
   Team Dashboard
 ========================================= */

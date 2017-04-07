@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Highlander</title>
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
+    <link rel="stylesheet" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/dashboard.js"></script>
@@ -36,12 +36,6 @@
         <a class="nav-item nav-color is-tab">
           Contact
         </a>
-        <!-- <a class="nav-item is-tab nav-color">
-        <figure class="image is-16x16" style="margin-right: 8px;">
-          <img src="http://bulma.io/images/jgthms.png">
-        </figure>
-        Profile
-        </a> -->
         <a class="nav-item is-tab nav-color">
           Log out
         </a>
@@ -54,13 +48,8 @@
     <div class="container profile">
       <div class="profile-heading">
         <div class="columns">
-          <div class="column is-2">
-            <a class="image is-128x128 avatar">
-              <img src="https://placeholdit.imgix.net/~text?txtsize=24&txt=256%C3%97256&w=256&h=256">
-            </a>
-          </div>
           <div class="column is-4">
-            <!-- <p class="userProfileData"></p> -->
+            <h1 class="title coach-title coach-heading-dashboard">Coach:</h1>
             <p>
               <span class="title is-bold profile-title coach-fullname"></span>
             </p>
@@ -78,7 +67,7 @@
   <div class="tabs is-toggle is-fullwidth is-medium">
     <ul>
       <li class="is-active">
-        <a href="team.html">
+        <a>
           <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
           <span>Dashboard</span>
         </a>
@@ -96,7 +85,7 @@
         </a>
       </li>
       <li>
-        <a>
+        <a href="stats.html">
           <span class="icon"><i class="fa fa-list-ol"></i></span>
           <span>Stats</span>
         </a>
@@ -123,7 +112,7 @@
             </div>
             <div class="level-right">
               <span class="level-item">
-                <a class="button is-primary is-outlined" href="team.html">
+                <a class="button is-primary is-outlined" href="add-team.html">
                   Add New Team
                 </a>
               </span>
@@ -138,35 +127,38 @@
           </ul>
         </div>
 
-        <div class="tile is-child box header">
-          <nav class="level dashboard-title">
-            <div class="level-left">
-              <div class="level-item">
-                <span class="icon icon-dasboard-placement">
-                  <i class="fa fa-list-ol" aria-hidden="true"></i>
-                </span>
-                <p>
-                  Stats
-                </p>
-              </div>
-            </div>
-            <div class="level-right">
-              <span class="level-item">
-                <a class="button is-primary is-outlined">
-                  Add New Stats
-                </a>
-              </span>
-            </div>
-          </nav>
-          <ul>
-            <article class="message">
-              <div class="message-body has-text-centered">
-                You dont have any Stats.
-              </div>
-            </article>
-          </ul>
+    <div class="tile is-child box header">
+      <nav class="level dashboard-title">
+        <div class="level-left">
+          <div class="level-item">
+            <span class="icon icon-dasboard-placement">
+              <i class="fa fa-users" aria-hidden="true"></i>
+            </span>
+            <p>
+              Roster
+            </p>
+          </div>
         </div>
+        <div class="level-right">
+      <span class="level-item">
+        <a class="button is-primary is-outlined" href="add-player.html">
+          Add Players
+        </a>
+      </span>
+    </div>
+  </nav>
+  <section>
+    <article class="message roster-dashboard-message">
+      <div class="message-body has-text-centered">
+        You dont have a Roster.
       </div>
+    </article>
+
+      <div class="columns">
+        <div class="column player-details-dashboard-page"></div>
+  </section>
+</div>
+</div>
 
     <div class="tile is-parent">
       <div class="tile is-child box header">
@@ -174,28 +166,80 @@
           <div class="level-left">
             <div class="level-item">
               <span class="icon icon-dasboard-placement">
-                <i class="fa fa-users" aria-hidden="true"></i>
+                <i class="fa fa-list-ol" aria-hidden="true"></i>
               </span>
               <p>
-                Roster
+                Stats
               </p>
             </div>
           </div>
           <div class="level-right">
             <span class="level-item">
-              <a class="button is-primary is-outlined" href="roster.html">
-                Add Players
+              <a class="button is-primary is-outlined" href="stats.html">
+                Add New Stats
               </a>
             </span>
           </div>
         </nav>
-        <ul>
+
+        <section>
           <article class="message">
             <div class="message-body has-text-centered">
-              You dont have a Roster.
+              You dont have Stats.
             </div>
           </article>
-        </ul>
+
+          <table class="table is-striped">
+            <thead class="the-table-of-life">
+              <tr>
+                <th><abbr title="Position" class="player-position">Pos</abbr></th>
+                <th class="stat-fullname">Name</th>
+                <th><abbr title="Hits">Hits</abbr></th>
+                <th><abbr title="At Bats">At Bats</abbr></th>
+                <th><abbr title="Home Runs">Home Runs</abbr></th>
+                <th><abbr title="Earned Runs">Earned Runs</abbr></th>
+                <th><abbr title="Innings Pitched">Innings Pitched</abbr></th>
+                <th><abbr title="Strikeouts">Strikeouts</abbr></th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <th><abbr title="Position">Pos</abbr></th>
+                <th>Name</th>
+                <th><abbr title="Hits">Hits</abbr></th>
+                <th><abbr title="At Bats">At Bats</abbr></th>
+                <th><abbr title="Home Runs">Home Runs</abbr></th>
+                <th><abbr title="Earned Runs">Earned Runs</abbr></th>
+                <th><abbr title="Innings Pitched">Innings Pitched</abbr></th>
+                <th><abbr title="Strikeouts">Strikeouts</abbr></th>
+              </tr>
+            </tfoot>
+            <tbody class="stat-details-container">
+              <tr class="the-table-of-life">
+                <th class="player-position"></th>
+                <td><a class="stat-fullname" href="http://localhost:8080/roster-list-player.html?id=1" title="Heriberto Roman">Heriberto Roman</a>
+                </td>
+                <td class="player-hits"></td>
+                <td>4</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td><a href="http://localhost:8080/roster-list-player.html?id=3" title="Big Mac">Big Mac</a></td>
+                <td>4</td>
+                <td>5</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </section>
       </div>
     </div>
   </div>

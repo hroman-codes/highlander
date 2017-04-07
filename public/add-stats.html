@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Highlander</title>
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
-    <link rel="stylesheet" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/team.js"></script>
@@ -52,20 +52,15 @@
             <div class="level-item">
               <p>
                 <span class="title is-bold profile-title">
-                  Teams
+                  Add New Stats
                 </span>
               </p>
             </div>
           </div>
           <div class="level-right">
             <span class="level-item">
-              <a class="button is-primary is-outlined" href="add-team.html">
-                Add New Team
-              </a>
-            </span>
-            <span class="level-item">
-              <a class="button is-primary is-outlined" href="team-list.html">
-                View Teams
+              <a class="button is-primary is-outlined" title="Disabled button" disabled href="team.html">
+                Add New Stats
               </a>
             </span>
           </div>
@@ -84,27 +79,21 @@
           <span>Dashboard</span>
         </a>
       </li>
-      <li class="is-active">
+      <li>
         <a href="team.html" class="button-color forlife">
-          <span class="icon">
-            <i class="fa fa-futbol-o" aria-hidden="true"></i>
-          </span>
+          <span class="icon"><i class="fa fa-futbol-o" aria-hidden="true"></i></span>
           <span>Team</span>
         </a>
       </li>
       <li>
         <a href="roster.html">
-          <span class="icon">
-            <i class="fa fa-users" aria-hidden="true"></i>
-          </span>
+          <span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span>
           <span>Roster</span>
         </a>
       </li>
-      <li>
-        <a href="stats.html">
-          <span class="icon">
-            <i class="fa fa-list-ol"></i>
-          </span>
+      <li class="is-active">
+        <a>
+          <span class="icon"><i class="fa fa-list-ol"></i></span>
           <span>Stats</span>
         </a>
       </li>
@@ -112,31 +101,66 @@
   </div>
 </section>
 
-<section class="hero is-medium is light">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title has-text-centered">
-         Save time producing your team on your score books, with a few
-         clicks you will save time registering players, adding teams and stats.
-         It's a one-stop shop for club & league management.
-      </h1>
-      <div class="columns">
-        <div class="column is-half is-offset-4">
-          <nav class="level">
-            <div class="level-right has-text-centered">
-              <span class="level-item">
-                <a class="button is-primary is-outlined" href="add-team.html">
-                  Add New Team
-                </a>
-              </span>
-              <span class="level-item">
-                <a class="button is-primary is-outlined" href="team-list.html">
-                  View Teams
-                </a>
-              </span>
-            </div>
-          </nav>
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-half is-offset-one-quarter box">
+        <div class="field">
+          <label class="label">Select Player</label>
+          <p class="control">
+            <span class="select is-medium">
+              <select>
+                <option>Choose Player</option>
+                <option>Randy Brown</option>
+                <option>Heriberto Roman</option>
+                <option>Ricky Roman</option>
+                <option>Big Mac</option>
+              </select>
+            </span>
+          </p>
         </div>
+        <div class="field">
+          <label class="label">Select Team</label>
+          <p class="control">
+            <span class="select is-medium">
+              <select>
+                <option>Choose Team</option>
+                <option>Highlanders</option>
+                <option>Gem Stars</option>
+                <option>Rockets</option>
+              </select>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <label class="label">Select Stat Category</label>
+          <p class="control">
+            <span class="select is-medium">
+              <select>
+                <option>Choose Stat</option>
+                <option>Hits</option>
+                <option>At Bats</option>
+                <option>Home Runs</option>
+                <option>Earned Runs</option>
+                <option>Innings Pitched</option>
+                <option>Strikeouts</option>
+              </select>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <label class="label">How Many</label>
+          <p class="control">
+            <input class="input is-medium" type="email" placeholder="How Many" id="howMany">
+          </p>
+        </div>
+          <div>
+            <span class="level-item has-text-centered">
+              <a class="button is-primary is-outlined" href="roster-list.html">
+                Add New Stats
+              </a>
+            </span>
+          </div>
       </div>
     </div>
   </div>

@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Highlander</title>
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
+    <link rel="stylesheet" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/team.js"></script>
@@ -52,15 +52,20 @@
             <div class="level-item">
               <p>
                 <span class="title is-bold profile-title">
-                  Teams
+                  Roster
                 </span>
               </p>
             </div>
           </div>
           <div class="level-right">
             <span class="level-item">
-              <a class="button is-primary is-outlined" href="add-team.html">
-                Add New Team
+              <a class="button is-primary is-outlined" href="add-player.html">
+                Add New Player
+              </a>
+            </span>
+            <span class="level-item">
+              <a class="button is-primary is-outlined" href="roster-list.html">
+                View Player Roster
               </a>
             </span>
           </div>
@@ -92,7 +97,7 @@
         </a>
       </li>
       <li>
-        <a>
+        <a href="stats.html">
           <span class="icon"><i class="fa fa-list-ol"></i></span>
           <span>Stats</span>
         </a>
@@ -109,12 +114,24 @@
          building schedules and automating tedious management
          tasks with just a few clicks. It's a one-stop shop for club & league management.
       </h1>
-      <div class="level-center">
-        <span class="level-item">
-          <a class="button is-primary is-outlined" href="add-player.html">
-            Add New Player
-          </a>
-        </span>
+      <div class="columns">
+        <div class="column is-half is-offset-4">
+          <nav class="level">
+            <div class="level-right has-text-centered">
+              <span class="level-item">
+                <a class="button is-primary is-outlined" href="add-player.html">
+                  Add New Player
+                </a>
+              </span>
+              <span class="level-item">
+                <a class="button is-primary is-outlined" href="roster-list.html">
+                  View Player Roster
+                </a>
+              </span>
+            </div>
+          </nav>
+        </div>
+      </div>
       </div>
     </div>
   </div>
