@@ -92,70 +92,49 @@ $(document).ready(function () {
 
    $('.player-details-dashboard-page').html(mergedListPlayers)
    $('.roster-dashboard-message').remove()
-  })
 
- var playerId = localStorage.getItem('playerId')
-  $.get('http://localhost:8080/players/' + playerId + '/stats', function (data) {
-    console.log(':: this is the player data ::', data)
+   // stats module
+   var mergeTeamStats = [];
+   data.teams.map(function(team){
+    //  console.log('the teams map', team)
+      team.players.map(function(player){
+        console.log('the players map', player)
+        var playerStats = {
+          firstName: player.first_name,
+          lastName: player.last_name,
+          position: player.position,
+          'Hits':0,
+          'At Bats':0,
+          'Home Runs':0,
+          'Earned Runs':0,
+          'Innings Pitched':0,
+          'Strikeouts': 0
+        };
+        player.stats.map(function(stat){
+          // console.log('the stats map', stat)
+          playerStats[stat.catalog.description] = stat.how_many;
+        });
+        // var tableBody = $('<tbody>', {
+        //   class: 'stat-details-container'
+        // });
+        var row = $('<tr>');
+        row.append($('<th>', {text: playerStats.position}));
+        row.append($('<td>', {
+          text: playerStats.firstName + ' ' + playerStats.lastName,
+          href: "http://localhost:8080/roster-list-player.html?id=" + player.id
+        }));
+        row.append($('<td>', {text: playerStats['Hits']}));
+        row.append($('<td>', {text: playerStats['At Bats']}));
+        row.append($('<td>', {text: playerStats['Home Runs']}));
+        row.append($('<td>', {text: playerStats['Earned Runs']}));
+        row.append($('<td>', {text: playerStats['Innings Pitched']}));
+        row.append($('<td>', {text: playerStats['Strikeouts']}));
 
-    // var mergedPlayerStats  = []
-    data.stats.map(function(playerStats) {
-      var playerName = data.first_name + ' ' + data.last_name
-      var description = playerStats.catalog
-      var howMany = playerStats.how_many
-      console.log(playerName)
-      console.log(description)
-      console.log(howMany)
-
-      // players.map(function(stat) {
-      //     var listStat = $('<tr>', {
-      //       class: 'the-table-of-life'
-      //     })
-      //     var playerPosition = $('<th>', {
-      //       class: 'player-position',
-      //       text: data.position
-      //     })
-      //     var playerName = $('<td>', {
-      //       playerlink: $('<a>', {
-      //         href: 'http://localhost:8080/roster-list-player.html?id=', //+ player.id,
-      //         text: data.first_name + ' ' + data.last_name
-      //       })
-      //     })
-      //     var playerHits = $('<td>', {
-      //       class: 'player-hits',
-      //       text: data.how_many
-      //     })
-      //
-      //     var playerStatCatalog = stat.catalog
-      //     console.log('This is the stat catalog ======>', playerStatCatalog)
-      //
-      //     var playerHowMany = stat.how_many
-      //     console.log('This is how many =======>', playerHowMany)
-      //
-      //     listStat.append(playerPosition)
-      //     listStat.append(playerName)
-      //     listStat.append(playerHits)
-      // })
+        mergeTeamStats.push(row)
+        // console.log(playerStats);
+        // tableBody.append(row);
+        })
+      });
+      $('.stat-details-container').html(mergeTeamStats)
     })
-    // $('.stat-details-container').html(listStats);
   })
-})
-
-// Goal: List player and stat
-// Steps:
-  // map through the players data and store it in a var //
-  // abstract the stats out in a var//
-  // then map through the var which stors the stats//
-  // console.log the var to see what kind of data I am getting//
-  //
-  // create nodes targeting the elements you want to update and store it in
-  // in a var
-  //
-  // then append the node var to the parent node divs
-  //
-  // return if need be
-
-// function getParameterByName(name) {
-//     var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
-//     return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
-// }
