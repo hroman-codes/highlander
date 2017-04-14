@@ -17,15 +17,18 @@ $(document).ready(function () {
 
      $('.coach-fullname').text(fullname)
      $('.coach-email').text(userEmail)
-    //  $('.teams-list-container').append(listTeams)
-    $('.teams-list-container').html(listTeams)
-    //  $('.add-team-message').remove()
+     $('.teams-list-container').html(listTeams)
 
      var mergedListPlayers = []
      data.teams.map(function(team){
+
+       console.log(team)
        var players = team.players
 
+
+
        players.map(function(player){
+        //  console.log(player.team)
          //card container div
          var listPlayer = $('<div>', {
            class:"card has-text-centered"
@@ -44,13 +47,6 @@ $(document).ready(function () {
            class: 'subtitle player-email',
            text: player.email
          })
-         var listTeamName = $('<p class="team-name">', {
-             text: team.name
-          })
-         var listPlayerPosition = $('<p>', {
-           class: 'player-position',
-           text: player.position
-         })
 
          // card footer
          var listPlayerFooter = $('<footer>', {
@@ -64,15 +60,13 @@ $(document).ready(function () {
          var editPlayerSpan = $('<span>');
 
          var editPlayerFooterLink = $('<a>', {
-           text: 'View Player',
+           text: 'View Player Details',
            href: 'http://localhost:8080/roster-list-player.html?id=' + player.id
          })
 
          // append card content
          listPlayerContent.append(listPlayerName)
          listPlayerContent.append(listPlayerEmail)
-         listPlayerContent.append(listTeamName)
-         listPlayerContent.append(listPlayerPosition)
 
          // append card content to main card container
          listPlayer.append(listPlayerContent)
@@ -94,15 +88,82 @@ $(document).ready(function () {
    $('.roster-dashboard-message').remove()
 
    // stats module
+   var tableRow = $('<tr>')
+
+   var position = $('<th>');
+   var positionAbbr = $('<abbr>', {
+     title: 'Position',
+     text: 'Pos'
+   })
+   position.append(positionAbbr);
+
+   var name = $('<th>');
+   var nameAbbr = $('<abbr>', {
+     title: 'Name',
+     text: 'Name'
+   })
+   name.append(nameAbbr);
+
+   var hits = $('<th>')
+   var hitsAbbr = $('<abbr>', {
+     title: 'Hits',
+     text: 'Hits'
+   })
+   hits.append(hitsAbbr);
+
+   var atBats = $('<th>')
+   var atBatsAbbr = $('<abbr>', {
+     title: 'At Bats',
+     text: 'AB'
+   })
+   atBats.append(atBatsAbbr)
+
+   var homeRuns = $('<th>')
+   var homeRunsAbbr = $('<abbr>', {
+     title: 'Home Runs',
+     text: 'HR'
+   })
+   homeRuns.append(homeRunsAbbr)
+
+   var earnedRuns = $('<th>')
+   var earnedRunsAbbr = $('<abbr>', {
+     title: 'Earned Runs',
+     text: 'ER'
+   })
+   earnedRuns.append(earnedRunsAbbr)
+
+   var inningsPitched = $('<th>')
+   var inningsPitchedAbbr = $('<abbr>', {
+     title: 'Inning Pitched',
+     text: 'IP'
+   })
+   inningsPitched.append(inningsPitchedAbbr)
+
+   var strikeOuts = $('<th>')
+   var strikeOutsAbbr = $('<abbr>', {
+     title: 'Strikeouts',
+     text: 'Strikeouts'
+   })
+   strikeOuts.append(strikeOutsAbbr)
+
+   tableRow.append(position)
+   tableRow.append(name)
+   tableRow.append(hits)
+   tableRow.append(atBats)
+   tableRow.append(homeRuns)
+   tableRow.append(earnedRuns)
+   tableRow.append(inningsPitched)
+   tableRow.append(strikeOuts)
+
+   $('.stat-header-details-container').html(tableRow)
+
    var mergeTeamStats = [];
    data.teams.map(function(team){
-    //  console.log('the teams map', team)
       team.players.map(function(player){
-        console.log('the players map', player)
         var playerStats = {
-          firstName: player.first_name,
-          lastName: player.last_name,
-          position: player.position,
+          firstName: player.first_name || 'No firstname',
+          lastName: player.last_name || 'No lastname',
+          position: player.position || 'No position',
           'Hits':0,
           'At Bats':0,
           'Home Runs':0,
@@ -111,18 +172,12 @@ $(document).ready(function () {
           'Strikeouts': 0
         };
         player.stats.map(function(stat){
-          // console.log('the stats map', stat)
           playerStats[stat.catalog.description] = stat.how_many;
         });
-        // var tableBody = $('<tbody>', {
-        //   class: 'stat-details-container'
-        // });
+
         var row = $('<tr>');
         row.append($('<th>', {text: playerStats.position}));
-        row.append($('<td>', {
-          text: playerStats.firstName + ' ' + playerStats.lastName,
-          href: "http://localhost:8080/roster-list-player.html?id=" + player.id
-        }));
+        row.append($('<td>', {text: playerStats.firstName + ' ' + playerStats.lastName}));
         row.append($('<td>', {text: playerStats['Hits']}));
         row.append($('<td>', {text: playerStats['At Bats']}));
         row.append($('<td>', {text: playerStats['Home Runs']}));
@@ -131,10 +186,15 @@ $(document).ready(function () {
         row.append($('<td>', {text: playerStats['Strikeouts']}));
 
         mergeTeamStats.push(row)
-        // console.log(playerStats);
-        // tableBody.append(row);
         })
       });
+
       $('.stat-details-container').html(mergeTeamStats)
+      $('.stats-module-dashboard-message').remove()
     })
+
+    $( ".delete" ).click(function() {
+      $( ".notification-container" ).fadeOut( "slow", function() {
+      });
+    });
   })

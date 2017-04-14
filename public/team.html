@@ -14,17 +14,16 @@
   </head>
 <body>
     <!-- Navigation -->
-<nav class="nav has-shadow bar">
-    <div class="container">
+<nav class="nav has-shadow">
       <div class="nav-left">
-        <a class="nav-item" href="index.html">
+        <a class="nav-item logo-nav" href="index.html">
           <p class="logo">Highlander</p>
         </a>
       </div>
 
         <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
         <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
-      <span class="nav-toggle">
+      <span class="nav-toggle toggle-hamburger-placement">
         <span></span>
         <span></span>
         <span></span>
@@ -32,19 +31,37 @@
 
         <!-- This "nav-menu" is hidden on mobile -->
         <!-- Add the modifier "is-active" to display it on mobile -->
-      <div class="nav-right nav-menu">
-        <a class="nav-item nav-color is-tab">
-          Contact
-        </a>
-        <a class="nav-item is-tab nav-color">
-          Log out
-        </a>
-      </div>
-    </div>
+        <div class="nav-right nav-menu">
+          <a class="nav-item nav-color is-tab" href="dashboard.html">
+            <i class="fa fa-home icon the-shit" aria-hidden="true"></i>
+            Dashboard
+          </a>
+          <a class="nav-item nav-color is-tab is-active yo-mama" href="team.html">
+            <i class="fa fa-futbol-o icon the-shit" aria-hidden="true"></i>
+            Team
+          </a>
+          <a class="nav-item nav-color is-tab" href="roster.html">
+            <i class="fa fa-users icon the-shit" aria-hidden="true"></i>
+            Roster
+          </a>
+          <a class="nav-item nav-color is-tab" href="stats.html">
+            <i class="fa fa-list-ol icon the-shit" aria-hidden="true"></i>
+            Stats
+          </a>
+          <!-- <a class="nav-item nav-color is-tab">
+            <i class="fa fa-envelope icon the-shit" aria-hidden="true"></i>
+            Contact
+          </a> -->
+          <a class="nav-item is-tab nav-color">
+            <i class="fa fa-sign-out icon the-shit" aria-hidden="true"></i>
+            Log out
+          </a>
+        </div>
+
 </nav>
 
 <section class="hero is-primary dashboard-bg-image">
-  <div class="hero-body">
+  <div class="hero-body hero-bg-image">
     <div class="container profile">
       <div class="profile-heading">
         <nav class="level">
@@ -60,7 +77,7 @@
           <div class="level-right">
             <span class="level-item">
               <a class="button is-primary is-outlined" href="add-team.html">
-                Add New Team
+                Add a New Team
               </a>
             </span>
             <span class="level-item">
@@ -75,7 +92,7 @@
 </div>
 </section>
 
-<section class="coach-dashboard-menu">
+<!-- <section class="coach-dashboard-menu">
   <div class="tabs is-toggle is-fullwidth is-medium">
     <ul>
       <li>
@@ -110,7 +127,7 @@
       </li>
     </ul>
   </div>
-</section>
+</section> -->
 
 <section class="hero is-medium is light">
   <div class="hero-body">
@@ -126,7 +143,7 @@
             <div class="level-right has-text-centered">
               <span class="level-item">
                 <a class="button is-primary is-outlined" href="add-team.html">
-                  Add New Team
+                  Add a New Team
                 </a>
               </span>
               <span class="level-item">
@@ -141,22 +158,5 @@
     </div>
   </div>
 </section>
-
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <p>
-        <strong>Highlander</strong> by <a href="https://iamromanh.github.io/heribertoResumeSite/index.html#"
-        >Heriberto Roman</a> made with <i class="fa fa-heart fa-2x"></i>.
-      <p>
-      <p>
-        <a class="icon" href="https://github.com/iamromanh">
-          <i class="fa fa-github"></i>
-        </a>
-      </p>
-    </div>
-  </div>
-</footer>
-
   </body>
 </html>

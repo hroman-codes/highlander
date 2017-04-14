@@ -5,26 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Highlander</title>
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
+    <link rel="stylesheet" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/team.js"></script>
   </head>
 <body>
     <!-- Navigation -->
-<nav class="nav has-shadow bar">
-    <div class="container">
+<nav class="nav has-shadow">
       <div class="nav-left">
-        <a class="nav-item" href="index.html">
+        <a class="nav-item logo-nav" href="index.html">
           <p class="logo">Highlander</p>
         </a>
       </div>
 
         <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
         <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
-      <span class="nav-toggle">
+      <span class="nav-toggle toggle-hamburger-placement">
         <span></span>
         <span></span>
         <span></span>
@@ -32,19 +31,32 @@
 
         <!-- This "nav-menu" is hidden on mobile -->
         <!-- Add the modifier "is-active" to display it on mobile -->
-      <div class="nav-right nav-menu">
-        <a class="nav-item nav-color is-tab">
-          Contact
-        </a>
-        <a class="nav-item is-tab nav-color">
-          Log out
-        </a>
-      </div>
-    </div>
+        <div class="nav-right nav-menu">
+          <a class="nav-item nav-color is-tab" href="dashboard.html">
+            <i class="fa fa-home icon the-shit" aria-hidden="true"></i>
+            Dashboard
+          </a>
+          <a class="nav-item nav-color is-tab is-active" href="team.html">
+            <i class="fa fa-futbol-o icon the-shit" aria-hidden="true"></i>
+            Team
+          </a>
+          <a class="nav-item nav-color is-tab" href="roster.html">
+            <i class="fa fa-users icon the-shit" aria-hidden="true"></i>
+            Roster
+          </a>
+          <a class="nav-item nav-color is-tab" href="stats.html">
+            <i class="fa fa-list-ol icon the-shit" aria-hidden="true"></i>
+            Stats
+          </a>
+          <a class="nav-item is-tab nav-color">
+            <i class="fa fa-sign-out icon the-shit" aria-hidden="true"></i>
+            Log out
+          </a>
+        </div>
 </nav>
 
 <section class="hero is-primary dashboard-bg-image">
-  <div class="hero-body">
+  <div class="hero-body hero-bg-image">
     <div class="container profile">
       <div class="profile-heading">
         <nav class="level">
@@ -68,37 +80,6 @@
       </div>
     </div>
 </div>
-</section>
-
-<section class="coach-dashboard-menu">
-  <div class="tabs is-toggle is-fullwidth is-medium">
-    <ul>
-      <li>
-        <a href="dashboard.html">
-          <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
-          <span>Dashboard</span>
-        </a>
-      </li>
-      <li class="is-active">
-        <a href="team.html" class="button-color forlife">
-          <span class="icon"><i class="fa fa-futbol-o" aria-hidden="true"></i></span>
-          <span>Team</span>
-        </a>
-      </li>
-      <li>
-        <a href="roster.html">
-          <span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span>
-          <span>Roster</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <span class="icon"><i class="fa fa-list-ol"></i></span>
-          <span>Stats</span>
-        </a>
-      </li>
-    </ul>
-  </div>
 </section>
 
 <section class="section">
@@ -134,22 +115,6 @@
     </div>
   </div>
 </section>
-
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <p>
-        <strong>Highlander</strong> by <a href="https://iamromanh.github.io/heribertoResumeSite/index.html#"
-        >Heriberto Roman</a> made with <i class="fa fa-heart fa-2x"></i>.
-      <p>
-      <p>
-        <a class="icon" href="https://github.com/iamromanh">
-          <i class="fa fa-github"></i>
-        </a>
-      </p>
-    </div>
-  </div>
-</footer>
 
   </body>
 </html>

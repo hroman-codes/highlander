@@ -1,10 +1,30 @@
 /* ======================================
+  Global Style
+========================================= */
+a {
+  color: #FFA500;
+}
+
+.hero-bg-image {
+  border-bottom: 1px solid orange;
+}
+
+
+a.nav-item.nav-color.is-tab.is-active {
+  border-bottom: 1px solid orange;
+  color: orange;
+  padding-bottom: calc(0.75rem - 3px);
+}
+
+
+/* ======================================
   Navbar
 ========================================= */
 a.button-color.for-life {
   background-color: #FFA500;
   border-color: #FFA500;
 }
+
 .logo {
   color: white;
   font-weight: 300;
@@ -12,24 +32,28 @@ a.button-color.for-life {
   font-family: 'Gloria Hallelujah', cursive;
 }
 
-.nav.has-shadow.bar {
-  background-color: #222222;
-  border-bottom: 1px solid #FFA500;
-  padding-top: 5px;
-  padding-bottom: 5px;
+.logo-nav {
+  background-color: #FFA500;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.nav.has-shadow {
+  background-color: #F5F5F5;
   top:0;
   right: 0;
   left: 0;
   z-index: 1030;
 }
 
-.nav-item.nav-color {
-  color: #FFFFFF;
+.toggle-hamburger-placement {
+  padding-top: 65px;
 }
 
-.nav-item.nav-color:hover {
-  color: #EDEFF0;
-  font-weight: 100;
+.nav-item a.is-tab:hover, a.nav-item.is-tab:hover {
+  border-bottom: 1px solid #FFA500;
 }
 
 /* ======================================
@@ -120,6 +144,10 @@ div.panel-block.panel-heading.panel-heading-center {
   background: rgba(0, 0, 0, 0.25)
 }
 
+.the-shit {
+  margin-right: 0.3em;
+}
+
 /* ======================================
   Login & Registration Page
 ========================================= */
@@ -157,7 +185,6 @@ a.button.is-primary.dasboard {
   padding-right: 10px;
 }
 
-
 /* ======================================
   Coach Dashboard
 ========================================= */
@@ -182,22 +209,18 @@ h1.title.coach-title.coach-heading-dashboard {
   margin-bottom: 2px;
 }
 
-
-/* ======================================
-  Team Dashboard
-========================================= */
-
-/*VVVV FIX THIS LATER VVVVV*/
-/*a.button-color.for-life {
-  background-color: #FFA500;
-  border-color: #FFA500;
-}*/
-
 /* ======================================
   Teams Dashboard
 ========================================= */
 #theTeamBg {
   background-color: #FFFFFF;
+}
+
+/* ======================================
+  Teams Dashboard
+========================================= */
+.dashboard-team-list-footer {
+  padding: 0;
 }
 
 /* ======================================
@@ -215,12 +238,9 @@ h1.title.coach-title.coach-heading-dashboard {
   color: #FA5544;
 }
 
-
-
-
-
-
-
+.is-hidden {
+  display: true;
+}
 
  /*======================================
   MediaQuery-Reporter Styles
