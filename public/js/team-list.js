@@ -6,6 +6,7 @@ $(document).ready(function(){
   $.get('http://localhost:8080/teams/', function(data){
     console.log('data from initial get ajax call ===>', data);
     state.teams = data
+    console.log(state.teams)
     render()
   })
 })
@@ -15,9 +16,8 @@ function render() {
   //render teams
     var teamList = state.teams.map(function(teamInfo) {
       console.log(teamInfo)
-
-      var theRealContainer = $('<div>', {
-        class: 'column is-3 team-list-details-page'
+      var columnContainer = $('<div>', {
+        class: 'card-list'
       })
 
       var cardContainer = $('<div>', {
@@ -52,7 +52,7 @@ function render() {
 
       var viewPlayerFooterLink = $('<a>', {
         text: 'View Team Details',
-        href: 'http://localhost:8080/team-details.html?id=' + teamId
+        href: 'http://localhost:8080/team-details.html?id=' + teamInfo.id
       })
 
       // append card content
@@ -62,7 +62,7 @@ function render() {
       // teamCity.append(teamList)
 
       //append card content to container
-      theRealContainer.append(cardContainer)
+      columnContainer.append(cardContainer)
 
       //footer
       teamListFooter.append(cardFooterItem)
@@ -70,11 +70,12 @@ function render() {
       viewPlayerSpan.append(viewPlayerFooterLink)
 
       // append footer to the main card container
-      theRealContainer.append(teamListFooter)
+      columnContainer.append(teamListFooter)
 
-      return theRealContainer
+      return columnContainer
   })
     $('.team-list-details-page').html(teamList)
+    $('.teams-list-notification').remove();
 }
 
 function getParameterByName(name) {

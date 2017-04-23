@@ -216,11 +216,24 @@ h1.title.coach-title.coach-heading-dashboard {
   background-color: #FFFFFF;
 }
 
-/* ======================================
-  Teams Dashboard
-========================================= */
 .dashboard-team-list-footer {
   padding: 0;
+}
+
+/* ======================================
+  Add-Team Dashboard
+========================================= */
+.add-team-notification,
+.add-team-error-notification {
+  display: none;
+}
+
+/* ======================================
+  Team-List Dashboard
+========================================= */
+.blockElement {
+  display: block !important;
+  position: relative;
 }
 
 /* ======================================
@@ -240,6 +253,49 @@ h1.title.coach-title.coach-heading-dashboard {
 
 .is-hidden {
   display: true;
+}
+
+
+/* ======================================
+  MediaQuery Styles
+========================================= */
+@media screen and (max-width: 1300px) {
+  .card-list {
+    width: 20%;
+    float: left;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card-list {
+    width: 25%;
+    float: left;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .card-list {
+    width: 33.3%;
+    float: left;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .card-list {
+    width: 50%;
+    float: left;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .card-list {
+    width: 100%;
+    display: block;
+    float: left;
+    min-height: 120px;
+  }
 }
 
  /*======================================

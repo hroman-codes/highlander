@@ -59,23 +59,26 @@
   <div class="hero-body hero-bg-image">
     <div class="container profile">
       <div class="profile-heading">
-        <nav class="level">
-          <div class="level-left">
-            <div class="level-item">
+        <nav class="columns level">
+          <div class="column is-4 level-left">
+            <h1 class="title coach-title coach-heading-dashboard">Player Details:</h1>
               <p>
-                <span class="title is-bold profile-title">
-                  Player Details
-                </span>
+                <span class="title is-bold profile-title coach-fullname"></span>
               </p>
-            </div>
+              <p>
+                <span class="tagline profile-metadata coach-email"></span>
+              </p>
+              <p>
+                <span class="tagline profile-metadata stats-pos"></span>
+              </p>
           </div>
           <div class="level-right">
             <span class="level-item">
                 <a class="button is-primary is-outlined" href="add-player.html">
                   Add New Player
                 </a>
-                </span>
-                <span class="level-item">
+            </span>
+            <span class="level-item">
                 <a class="button is-primary is-outlined" href="team-list.html">
                   Edit Player
                 </a>
@@ -156,18 +159,24 @@
           <table class="table">
             <thead>
               <tr>
-                <th><abbr title="Team">Team</abbr></th>
                 <th><abbr title="Position">Pos</abbr></th>
-                <th><abbr title="Name">Name</abbr></th>
                 <th><abbr title="Hits">Hits</abbr></th>
                 <th><abbr title="At Bats">AB</abbr></th>
                 <th><abbr title="Home Runs">HR</abbr></th>
                 <th><abbr title="Earned Runs">ER</abbr></th>
-                <th><abbr title="Inning Pitched">IP</abbr></th>
+                <th><abbr title="Innings Pitched">IP</abbr></th>
                 <th><abbr title="Strikeouts">Strikeouts</abbr></th>
               </tr>
             </thead>
-            <tbody class="stats-list-container"></tbody>
+            <tbody class="stats-list-container">
+              <td class="stats-pos"></td>
+              <td class="stats-hits"></td>
+              <td class="stats-at-bats"></td>
+              <td class="stats-home-runs"></td>
+              <td class="stats-earned-runs"></td>
+              <td class="stats-innings-pitched"></td>
+              <td class="stats-strikeouts"></td>
+            </tbody>
           </table>
 
         </section>

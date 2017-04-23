@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/team-list.js"></script>
+    <script src="js/team-details.js"></script>
   </head>
 <body>
     <!-- Navigation -->
@@ -59,32 +59,47 @@
   <div class="hero-body hero-bg-image">
     <div class="container profile">
       <div class="profile-heading">
-        <nav class="level">
-          <div class="level-left">
-            <div class="level-item">
-              <p>
-                <span class="title is-bold profile-title">
-                  Team List
-                </span>
+        <nav class="columns level">
+          <div class="column is-4 level-left">
+            <h1 class="title coach-title coach-heading-dashboard">Team Details:</h1>
+              <p class="profile-metadata">
+                <span class="title is-bold profile-title team-name"></span>
               </p>
-            </div>
+              <p class="profile-metadata">
+                Location:
+                <span class="tagline profile-metadata team-location"></span>
+              </p>
+              <p class="profile-metadata">
+                Name:
+                <span class="tagline profile-metadata coach-name"></span>
+              </p>
+              <p class="profile-metadata">
+                Email:
+                <span class="tagline profile-metadata coach-email"></span>
+              </p>
+
           </div>
           <div class="level-right">
             <span class="level-item">
-              <a class="button is-primary is-outlined" href="add-team.html">
-                Add a New Team
-              </a>
+                <a class="button is-primary is-outlined" href="add-player.html">
+                  Add New Player
+                </a>
+            </span>
+            <span class="level-item">
+                <a class="button is-primary is-outlined" href="team-list.html">
+                  Edit Player
+                </a>
             </span>
           </div>
         </nav>
       </div>
     </div>
-</div> 
+</div>
 </section>
 
 <section>
-  <div class="notification has-text-centered teams-list-notification content">
-    <h1>No Teams to Show.</h1>
+  <div class="notification has-text-centered team-details-notification content">
+    <h1>No Teams Details to Show.</h1>
     <div>
     <span class="level-item">
       <a class="button is-primary is-outlined" href="add-team.html">
@@ -93,7 +108,7 @@
     </span>
   </div>
   </div>
-  <div class="columns is-gapless team-list-details-page blockElement"></div>
+  <div class="columns is-gapless team-details-page blockElement"></div>
 </section>
   </body>
 </html>

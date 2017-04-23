@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/team.js"></script>
+    <script src="js/add-team.js"></script>
   </head>
 <body>
     <!-- Navigation -->
@@ -85,32 +85,42 @@
 <section class="section">
   <div class="container">
     <div class="columns">
-      <div class="column is-half is-offset-one-quarter box">
+      <div class="column is-half is-offset-one-quarter box yomama">
+        <div class="notification is-success add-team-notification">
+          Success! You added a team.
+        </div>
+
+        <div class="notification is-warning add-team-error-notification">
+          Sorry you are missing details, please fill out the form ENTIRELY!
+        </div>
+
+        <form action='/team-list.html' method="POST">
           <div class="field">
             <label class="label">Team Name</label>
             <p class="control">
-              <input class="input is-medium" type="text" placeholder="Team Name" id="teamName">
+              <input class="input is-medium required" type="text" placeholder="Team Name" id="teamName">
             </p>
           </div>
           <div class="field">
             <label class="label">City</label>
             <p class="control">
-              <input class="input is-medium" type="text" placeholder="City" id="location">
+              <input class="input is-medium required" type="text" placeholder="City" id="cityLocation">
             </p>
           </div>
           <div class="field">
             <label class="label">State</label>
             <p class="control">
-              <input class="input is-medium" type="text" placeholder="State" id="location">
+              <input class="input is-medium required" type="text" placeholder="State" id="stateLocation">
             </p>
           </div>
-          <div class="level">
-            <span class="level-item has-text-centered">
-              <a class="button is-primary is-outlined" href="team.html">
+          <div class="field level">
+            <p class="control has-text-centered test-message">
+              <button class="button is-primary is-outlined">
                 Add New Team
-              </a>
-            </span>
+              </button>
+            </p>
           </div>
+        </form>
       </div>
     </div>
   </div>

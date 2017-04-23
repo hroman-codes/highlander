@@ -5,7 +5,7 @@ $(document).ready(function () {
      var listTeam = $('<li class="panel-heading">')
      var linkTeam = $('<a>', {
          text: team.name,
-         href: 'http://localhost:8080/team.html?id='+ team.id
+         href: 'http://localhost:8080/team-details.html?id='+ team.id
        })
        listTeam.append(linkTeam)
 
@@ -25,11 +25,7 @@ $(document).ready(function () {
        console.log(team)
        var players = team.players
 
-
-
        players.map(function(player){
-        //  console.log(player.team)
-         //card container div
          var listPlayer = $('<div>', {
            class:"card has-text-centered"
          })
