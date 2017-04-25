@@ -15,11 +15,9 @@ var state = {
 $(document).ready(function () {
   var playerId = getParameterByName('id')
   $.get('http://localhost:8080/players/' + playerId, function(data) {
-    console.log('data from player get', data)
     state.teams = data.teams;
     state.player = data;
     $.get('http://localhost:8080/players/' + playerId + '/stats', function(data) {
-      console.log('Player stats data', data)
       data.stats.map(function(stat){
         state.stats[stat.catalog.description] = stat.how_many;
       });
@@ -28,15 +26,15 @@ $(document).ready(function () {
   })
 })
 
-var teamId = getTeamIdParameter('teamid')
 function render(){
   var teamsElements = state.teams.map(function(team) {
+
     var listTeam = $('<li>', {
       class: "panel-heading"
     })
     var linkTeam = $('<a>', {
       text: team.name,
-      href: 'http://localhost:8080/team-details.html?id=' + teamId
+      href: 'http://localhost:8080/team-details.html?id=' + team.id
     })
     listTeam.append(linkTeam)
 
@@ -47,8 +45,6 @@ function render(){
     var fullName = state.player.first_name + ' ' + state.player.last_name
     var playerEmail = state.player.email
     var playerPosition = state.player.position
-
-    console.log(playerPosition)
 
     $('.coach-fullname').text(fullName)
     $('.coach-email').text(playerEmail)
@@ -65,9 +61,4 @@ function render(){
 function getParameterByName(name) {
     var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search)
     return match && decodeURIComponent(match[1].replace(/\+/g, ' '))
-}
-
-function getTeamIdParameter(teamid) {
-  var match = RegExp('[?&]' + teamid + '=([^&]*)').exec(window.location.search)
-  return match && decodeURIComponent(match[1].replace(/\+/g, ' '))
 }

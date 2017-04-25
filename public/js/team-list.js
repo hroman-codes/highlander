@@ -3,10 +3,12 @@ var state = {
 }
 
 $(document).ready(function(){
+  $('.teams-list-notification').text('......Loading').show()
   $.get('http://localhost:8080/teams/', function(data){
     console.log('data from initial get ajax call ===>', data);
     state.teams = data
     console.log(state.teams)
+    $('.teams-list-notification').text(' ').hide()
     render()
   })
 })

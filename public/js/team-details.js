@@ -12,30 +12,21 @@
 
  var teamId = getParameterByName('id');
  $(document).ready(function() {
-   console.log('Document is ready')
-   // get the team data
+   $('.team-details-notification').text('......Loading').show();
    $.get('http://localhost:8080/teams/' + teamId, function(data) {
      state.team.city = data.city
      state.team.state = data.state
      state.team.name = data.name
-
      state.coach = data.coach
-
      state.players = data.players
-
-     console.log('state.players', state.players)
-
-     console.log(':this should print out the team data::,', data)
+     $('.team-details-notification').html('').hide();
      render()
    })
  })
 
- //set up render functions
- // render / append the elements to the DOM via state
 function render() {
 
   var coachDetails = state.coach.map(function(dataCoach){
-    // console.log('::this should print the coach data::', data)
     var coachName = dataCoach.first_name + ' ' + dataCoach.last_name
     var coachEmail = dataCoach.email
 
@@ -50,7 +41,6 @@ function render() {
   $('.team-location').text(teamLocation)
 
   var listOfPlayers = state.players.map(function(dataPlayers){
-    console.log('dataPlayers ==>', dataPlayers)
     var columnContainer = $('<div>', {
       class: 'card-list'
     })
@@ -64,19 +54,16 @@ function render() {
       id: 'theTeamBg'
     })
 
-    // var teamName = $('<p>', {
     var playerName = $('<p>', {
       class: 'title team-name',
       text: dataPlayers.first_name + ' ' + dataPlayers.last_name
     })
 
-    // var teamCity = $('<p>', {
     var playerEmail = $('<p>', {
       class: 'subtitle team-city-state',
       text: dataPlayers.email
     })
 
-    // var playerEmail = $('<p>', {
     var playerPosition = $('<p>', {
       class: 'subtitle team-city-state',
       text: dataPlayers.position
@@ -117,7 +104,6 @@ function render() {
 
     return columnContainer
   })
-  $('.team-details-notification').remove()
   $('.team-details-page').html(listOfPlayers)
 }
 

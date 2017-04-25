@@ -5,29 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Highlander</title>
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav has-shadow bar">
-        <div class="container">
-          <div class="nav-center">
-            <a class="nav-item" href="index.html">
+    <nav class="nav has-shadow">
+          <div class="nav-left">
+            <a class="nav-item logo-nav" href="index.html">
               <p class="logo">Highlander</p>
             </a>
           </div>
 
             <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
             <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
-          <span class="nav-toggle">
+          <span class="nav-toggle toggle-hamburger-placement">
             <span></span>
             <span></span>
             <span></span>
           </span>
-        </div>
+
+          <div class="nav-right nav-menu">
+            <a class="nav-item is-tab nav-color" href="register.html">
+              <i class="fa fa-user-o icon the-shit" aria-hidden="true"></i>
+              Sign Up
+            </a>
+            <a class="nav-item is-tab nav-color" href="login.html">
+              <i class="fa fa-sign-out icon the-shit" aria-hidden="true"></i>
+              Log In
+            </a>
+          </div>
     </nav>
 
 <section class="hero is-small login-bg-image">
