@@ -57,12 +57,12 @@ router.put('/:id', function(req, res) {
   })
 })
 
-router.post('/:id', function(req, res) {
-  const postParams = ['name', 'location'];
+router.post('/', function(req, res) {
+  const postParams = ['teamName', 'cityLocation', 'stateLocation'];
   for (var i = 0; i < postParams.length; i++) {
     const confirmPostParams = postParams[i];
     if(!(confirmPostParams in req.body)) {
-      const errorMessage = `Sorry your missing ${confirmedParams} please try again`
+      const errorMessage = `Sorry your missing ${confirmPostParams} please try again`
       console.error(errorMessage);
       return res.status(400).send(errorMessage);
     }
@@ -70,8 +70,10 @@ router.post('/:id', function(req, res) {
 
   Team
   .forge({
-    name: req.body.name,
-    location: req.body.location
+    name: req.body.teamName,
+    city: req.body.cityLocation,
+    state: req.body.stateLocation,
+    game_date: new Date()
   })
   .save()
   .then(function(team) {

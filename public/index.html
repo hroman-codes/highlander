@@ -5,24 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Highlander</title>
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
+    <link rel="stylesheet" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
   </head>
 <body>
     <!-- Navigation -->
-<nav class="nav has-shadow bar">
-    <div class="container">
+<nav class="nav has-shadow">
       <div class="nav-left">
-        <a class="nav-item" href="index.html">
+        <a class="nav-item logo-nav" href="index.html">
           <p class="logo">Highlander</p>
         </a>
       </div>
 
         <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
         <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
-      <span class="nav-toggle">
+      <span class="nav-toggle toggle-hamburger-placement">
         <span></span>
         <span></span>
         <span></span>
@@ -31,26 +30,19 @@
         <!-- This "nav-menu" is hidden on mobile -->
         <!-- Add the modifier "is-active" to display it on mobile -->
       <div class="nav-right nav-menu">
-        <a class="nav-item nav-color">
-          About
-        </a>
-        <a class="nav-item nav-color">
+        <!-- <a class="nav-item is-tab nav-color">
+          <i class="fa fa-paper-plane-o icon the-shit" aria-hidden="true"></i>
           Contact
+        </a> -->
+        <a class="nav-item is-tab nav-color" href="register.html">
+          <i class="fa fa-user-o icon the-shit" aria-hidden="true"></i>
+          Sign Up
         </a>
-        <a class="nav-item nav-color">
-          Blog
+        <a class="nav-item is-tab nav-color" href="login.html">
+          <i class="fa fa-sign-out icon the-shit" aria-hidden="true"></i>
+          Log In
         </a>
-
-        <span class="nav-item">
-          <a class="button is-info is-inverted is-outlined" href="login.html">
-            <span>Log In</span>
-          </a>
-          <a class="button is-success is-inverted is-outlined" href="register.html">
-            <span>Sign up</span>
-          </a>
-      </span>
       </div>
-    </div>
 </nav>
 
   <!-- Hero -->
@@ -58,9 +50,9 @@
   <div class="hero-body bg-img">
     <div class="container container-hero">
       <h1 class="title title-hero has-text-centered">
-        A Simple App With Easy To Use Team Management Features
+        A Simple App For Coaches To Manage Their Teams, Smack Talk,
         <br>
-        Try It, and Discover How Much Time You'll Save Each Week.
+        and Poach Players from other teams.
       </h1>
     </div>
 
@@ -78,10 +70,7 @@
           <div class="content">
             <h1>Manage Your Profile with Ease</h1>
             <p>
-              As coach experience the simple way to manage teams, players, and player stats.</br>
-            </p>
-            <p>
-              As a player find your team and updated stats, also do a little trash talking to your teammates.
+              As coach experience the simple way to manage teams, talk trash and poach players.</br>
             </p>
           </div>
         </div>
@@ -108,20 +97,20 @@
         </div>
 
         <div class="column is-3">
-          <div class="card card-color">
+          <div class="card">
             <div class="card-content">
               <p class="has-text-centered">
                 <i class="fa fa-user-circle coach-card-icon" aria-hidden="true"></i>
               </p>
               <p class="title level-item">
-                Team Member
+                Player
               </p>
               <p class="has-text-centered">
-                <a class="button is-active is-1 is-outlined">
+                <a class="button is-active is-1">
                   <span class="icon is-small">
-                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <i class="fa fa-handshake-o" aria-hidden="true"></i>
                   </span>
-                  <span>Find Team</span>
+                  <span>Poach Player</span>
                 </a>
               </p>
             </div>
@@ -183,7 +172,8 @@
               Who Is on Top Of Thier Game?
             </h1>
             <p>
-              As coach and player brag about your team and player standings</br>
+              As coach brag about your team and player standings with
+              other head coaches. </br>
             </p>
           </div>
         </div>

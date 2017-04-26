@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   var teamId = getParameterByName('id');
       $.get('http://localhost:8080/teams/' + teamId, function(data) {
         console.log(data);

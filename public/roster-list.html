@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Highlander</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
+      <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/roster-list.js"></script>
+  </head>
+<body>
+    <!-- Navigation -->
+<nav class="nav has-shadow">
+      <div class="nav-left">
+        <a class="nav-item logo-nav" href="index.html">
+          <p class="logo">Highlander</p>
+        </a>
+      </div>
+
+        <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+        <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+      <span class="nav-toggle toggle-hamburger-placement">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+
+        <!-- This "nav-menu" is hidden on mobile -->
+        <!-- Add the modifier "is-active" to display it on mobile -->
+        <div class="nav-right nav-menu">
+          <a class="nav-item nav-color is-tab" href="dashboard.html">
+            <i class="fa fa-home icon the-shit" aria-hidden="true"></i>
+            Dashboard
+          </a>
+          <a class="nav-item nav-color is-tab" href="team.html">
+            <i class="fa fa-futbol-o icon the-shit" aria-hidden="true"></i>
+            Team
+          </a>
+          <a class="nav-item nav-color is-tab is-active" href="roster.html">
+            <i class="fa fa-users icon the-shit" aria-hidden="true"></i>
+            Roster
+          </a>
+          <a class="nav-item nav-color is-tab" href="stats.html">
+            <i class="fa fa-list-ol icon the-shit" aria-hidden="true"></i>
+            Stats
+          </a>
+          <a class="nav-item is-tab nav-color">
+            <i class="fa fa-sign-out icon the-shit" aria-hidden="true"></i>
+            Log out
+          </a>
+        </div>
+</nav>
+
+<section class="hero is-primary dashboard-bg-image">
+  <div class="hero-body hero-bg-image">
+    <div class="container profile">
+      <div class="profile-heading">
+        <nav class="level">
+          <div class="level-left">
+            <div class="level-item">
+              <p>
+                <span class="title is-bold profile-title">
+                  Roster List
+                </span>
+              </p>
+            </div>
+          </div>
+          <div class="level-right">
+            <span class="level-item">
+              <a class="button is-primary is-outlined" href="add-player.html">
+                Add New Player
+              </a>
+            </span>
+          </div>
+        </nav>
+      </div>
+    </div>
+</div>
+</section>
+
+<section>
+  <div class="notification has-text-centered teams-list-notification content"></div>
+  <div class="columns is-gapless team-list-details-page blockElement"></div>
+</section>
+  </body>
+</html>

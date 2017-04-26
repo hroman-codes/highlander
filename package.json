@@ -11,6 +11,7 @@
   "author": "Heriberto Roman",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^1.0.2",
     "body-parser": "^1.17.1",
     "bookshelf": "^0.10.3",
     "bulma": "^0.4.0",
