@@ -6,7 +6,6 @@ $(document).ready(function() {
       cityLocation: $('#cityLocation').val(),
       stateLocation: $('#stateLocation').val()
     };
-    console.log(postData)
 
     if ( $('.required').val().length === 0) {
       $('.add-team-error-notification').slideDown('fast');
@@ -24,14 +23,14 @@ $(document).ready(function() {
         data: JSON.stringify(postData),
         success: function(data) {
           $('.add-team-notification').slideDown('fast');
-          window.setTimeout(close1, 2000);
+          window.setTimeout(closeNotification, 2000);
 
-          function close1() {
+          function closeNotification() {
             $('.add-team-notification').slideUp('fast');
           }
-          window.setTimeout(myFunc, 3000)
+          window.setTimeout(redirect, 3000)
 
-          function myFunc(){
+          function redirect(){
             location.href = '/team-list.html'
           }
         },
@@ -41,36 +40,3 @@ $(document).ready(function() {
     }
   })
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-$.ajax({
-  type: 'PUT',
-  url: 'http:/localhost:8080/teams/',
-  data: JSON.stringify(postData),
-  success: function(data){
-    //location.href = '/team-list.html'
-  },
-  fail: function(error){
-    //$('#alert').text(error);
-    //console.log(error)
-  },
-  contentType: "application/json",
-  dataType: 'json'
-})
-*/

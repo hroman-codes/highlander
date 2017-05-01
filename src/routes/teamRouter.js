@@ -29,7 +29,7 @@ router.get('/:id', function(req, res) {
 
 router.put('/:id', function(req, res) {
   // check to see if the proper params is equal to what the user is inputting
-  const updateParams = ['name', 'location']
+  const updateParams = ['name', 'city', 'state']
   for(var i = 0; i < updateParams.length; i++) {
     const confirmedParams = updateParams[i]
     if(!(confirmedParams in req.body)) {
@@ -46,7 +46,8 @@ router.put('/:id', function(req, res) {
   .then(function(team) {
     return team.save({
       name: req.body.name,
-      location: req.body.location
+      city: req.body.city,
+      state: req.body.state
     })
   })
   .then(function(team) {

@@ -1,0 +1,60 @@
+$(document).ready(function() {
+  $('#myBtn').on('click', function() {
+    $('.modal').addClass('is-active').fadeIn('slow')
+  })
+
+  $('.form-trigger').on('click', function(e) {
+    e.preventDefault()
+    var postData = {
+      // NEED TO REVIEW WITH ROUTE AND CONFRIM
+      first_name: $('#firstName').val(),
+      last_name: $('#lastName').val(),
+      email: $('#playerEmail').val(),
+      position: $('#playerPosition').val()
+    }
+
+  if ($('.required').val().length === 0) {
+    $('.add-team-error-notification').slideDown('fast')
+    window.setTimeout(closeWarningMessage, 3000)
+
+    function closeWarningMessage() {
+      $('add-team-error-notification').slideUp('fast')
+    }
+
+    return;
+  } else {
+    var teamId = getParameterByName('id')
+    $.ajax({
+      type: 'PUT',
+      url: 'http://localhost:8080/players/' + teamId,
+      data: JSON.stringify(postData),
+      success: function(data){
+        $('.add-team-notification').slideDown('fast')
+        window.setTimeout(closeNotification, 2000)
+
+        function closeNotification() {
+          $('.add-team-notification').slideUp('fast')
+        }
+        window.setTimeout(reload, 3000)
+
+        function reload() {
+          location.reload()
+        }
+      },
+      fail: function() {
+        alert('Edit team function not processed please try again.')
+      },
+      contentType: 'application/json',
+      dataType: 'json'
+    })
+   }
+  })
+  $('.delete').on('click', function() {
+    $('.modal').hide()
+  })
+})
+
+function getParameterByName(name) {
+    var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
