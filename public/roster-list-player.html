@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/roster-list-player.js"></script>
+    <script src="js/edit-player.js"></script>
   </head>
 <body>
     <!-- Navigation -->
@@ -81,7 +82,7 @@
                 </a>
             </span>
             <span class="level-item">
-                <a class="button is-primary is-outlined" href="team-list.html">
+                <a class="button is-primary is-outlined" id="myBtn">
                   Edit Player
                 </a>
             </span>
@@ -121,13 +122,6 @@
               You dont have any teams.
             </div>
           </ul>
-          <!-- <section class="teams-list-container">
-            <article class="message add-team-message">
-              <div class="message-body has-text-centered">
-                You dont have any teams.
-              </div>
-            </article>
-          </section> -->
         </div>
       </div>
 
@@ -183,6 +177,58 @@
 
         </section>
         </section>
+
+        <!-- is-active -->
+        <div class="modal modal-text-color">
+          <div class="modal-background"></div>
+            <div class="modal-card">
+              <header class="modal-card-head">
+                <p class="modal-card-title">Edit Player</p>
+                <button class="delete"></button>
+              </header>
+              <section class="modal-card-body">
+                <div class="notification is-success add-team-notification">
+                  Success! You added a team.
+                </div>
+
+                <div class="notification is-warning add-team-error-notification">
+                  Sorry you are missing details, please fill out the form ENTIRELY!
+                </div>
+
+                <form action='/team-list.html' method="POST">
+                  <div class="field">
+                    <label class="label">First Name</label>
+                    <p class="control">
+                      <input class="input is-medium required" type="text" placeholder="First Name" id="firstName">
+                    </p>
+                  </div>
+                  <div class="field">
+                    <label class="label">Last Name</label>
+                    <p class="control">
+                      <input class="input is-medium required" type="text" placeholder="Last Name" id="lastName">
+                    </p>
+                  </div>
+                  <div class="field">
+                    <label class="label">Email</label>
+                    <p class="control">
+                      <input class="input is-medium required" type="text" placeholder="Email" id="playerEmail">
+                    </p>
+                  </div>
+                  <div class="field">
+                    <label class="label">Position</label>
+                    <p class="control">
+                      <input class="input is-medium required" type="text" placeholder="Position" id="playerPosition">
+                    </p>
+                  </div>
+                </form>
+              </section>
+              <footer class="modal-card-foot">
+                <button class="button is-primary is-outlined form-trigger">
+                  Edit Team
+                </button>
+              </footer>
+            </div>
+          </div>
       </div>
     </div>
   </div>

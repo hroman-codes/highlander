@@ -39,7 +39,7 @@ router.get('/:id/stats', function(req, res) {
 // update player
 router.put('/:id', function(req, res) {
   // check to see if the proper params is equal to what the user is inputting
-   const updateParams = ['email', 'first_name', 'last_name']
+   const updateParams = ['email', 'first_name', 'last_name', 'position']
    for(var i = 0; i < updateParams.length; i++) {
      const confirmedParams = updateParams[i];
      if(!(confirmedParams in req.body)) {
@@ -56,7 +56,8 @@ router.put('/:id', function(req, res) {
      return player.save({
        email: req.body.email,
        first_name: req.body.first_name,
-       last_name: req.body.last_name
+       last_name: req.body.last_name,
+       position: req.body.position
      })
    })
    .then(function(player){
