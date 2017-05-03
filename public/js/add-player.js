@@ -3,40 +3,43 @@ $(document).ready(function() {
     $('.add-player-modal').addClass('is-active').fadeIn('slow')
   })
 
+  $.ajax({
+    type: 'GET',
+    url: 'http://localhost:8080/teams',
+    success: function(data) {
+      var options = data.map(function(team, index){
+        return '<option value="'+team.id+'">'+team.name+'</option>';
+      });
+      $('.select-teams').html(options);
+    }
+  })
+
   $('.form-trigger-add-player').on('click', function(e) {
-    console.log('add player button clicked')
     e.preventDefault()
     var postData = {
       email: $('#playerEmail').val(),
       first_name: $('#firstName').val(),
       last_name: $('#lastName').val(),
       position: $('#playerPosition').val()
-      // team_id: $('#teamId').val()
     }
-    console.log('postData', postData)
 
-    if ($('.required').val().length === 0) {
+    if ($('.new-player .required').val().length === 0) {
       $('.add-team-error-notification').slideDown('fast')
       window.setTimeout(closeWarningMessage, 3000)
 
       function closeWarningMessage() {
         $('.add-team-error-notification').slideUp('fast')
       }
-      console.log('I made it here')
 
       return;
     } else {
-      console.log('I made it here')
-
-      var playerId = getParameterByName('id')
-      console.log('I made it here')
-      console.log('playerId', playerId)
+      var teamId = getParameterByName('id') || $('.select-teams').val();
       $.ajax({
         type: 'POST',
-        url:'http://localhost:8080/players/' + playerId,
+        url:'http://localhost:8080/teams/' + teamId + '/player/',
         data: JSON.stringify(postData),
         success: function(data) {
-          $('.add-team-notification').slideUp('fast')
+          $('.add-team-notification').slideDown('fast')
           window.setTimeout(closeNotification, 2000)
 
           function closeNotification() {
@@ -45,7 +48,7 @@ $(document).ready(function() {
           window.setTimeout(reload, 3000)
 
           function reload() {
-            location.reload()
+            location.href = 'http://localhost:8080/team-details.html?id=' + teamId;
           }
         },
         fail: function() {

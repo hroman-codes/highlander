@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 
 const Team = require('../models/Team');
+const Player = require('../models/Player');
 
 router.use(bodyParser.urlencoded({extended: true}));
 router.use(jsonParser);
@@ -82,6 +83,34 @@ router.post('/', function(req, res) {
   })
   .catch(function(err) {
     return res.status(500).json(err);
+  })
+})
+
+router.post('/:id/player', function(req, res) {
+  const postParams = ['email', 'first_name', 'last_name', 'position']
+  for (var i = 0; i < postParams.length; i++) {
+    const confirmPostParams = postParams[i];
+    if(!(confirmPostParams in req.body)) {
+      const errorMessage = `Sorry your missing ${confirmPostParams} please try again`
+      console.error(errorMessage);
+      return res.status(400).send(errorMessage);
+    }
+  }
+
+  Player
+  .forge({
+    email: req.body.email,
+    first_name: req.body.first_name,
+    last_name: req.body.last_name,
+    position: req.body.position
+  })
+  .save()
+  .then(function(player) {
+    player.teams().attach(req.params.id)
+    return res.status(200).json(player)
+  })
+  .catch(function(err) {
+    return res.status(500).json(err)
   })
 })
 
