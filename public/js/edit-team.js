@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $('#myBtn').on('click', function() {
-    $('.modal').addClass('is-active').fadeIn('slow')
+    $('.edit-team-modal').addClass('is-active').fadeIn('slow')
   })
 
   $('.form-trigger').on('click', function(e) {

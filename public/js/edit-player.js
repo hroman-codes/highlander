@@ -6,11 +6,11 @@ $(document).ready(function() {
   $('.form-trigger').on('click', function(e) {
     e.preventDefault()
     var postData = {
-      // NEED TO REVIEW WITH ROUTE AND CONFRIM
       first_name: $('#firstName').val(),
       last_name: $('#lastName').val(),
       email: $('#playerEmail').val(),
-      position: $('#playerPosition').val()
+      position: $('#playerPosition').val(),
+      team_id: $('team_id').val()
     }
 
   if ($('.required').val().length === 0) {
@@ -18,15 +18,15 @@ $(document).ready(function() {
     window.setTimeout(closeWarningMessage, 3000)
 
     function closeWarningMessage() {
-      $('add-team-error-notification').slideUp('fast')
+      $('.add-team-error-notification').slideUp('fast')
     }
 
     return;
   } else {
-    var teamId = getParameterByName('id')
+    var playerId = getParameterByName('id')
     $.ajax({
       type: 'PUT',
-      url: 'http://localhost:8080/players/' + teamId,
+      url: 'http://localhost:8080/players/' + playerId,
       data: JSON.stringify(postData),
       success: function(data){
         $('.add-team-notification').slideDown('fast')
@@ -42,7 +42,7 @@ $(document).ready(function() {
         }
       },
       fail: function() {
-        alert('Edit team function not processed please try again.')
+        alert('Edit player function fail, please try again.')
       },
       contentType: 'application/json',
       dataType: 'json'

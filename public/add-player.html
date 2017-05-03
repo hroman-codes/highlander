@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/team.js"></script>
+    <script src="js/add-player.js"></script>
   </head>
 <body>
     <!-- Navigation -->
@@ -87,48 +88,53 @@
 </div>
 </section>
 
-<section class="section">
+<section class="section new-player">
   <div class="container">
     <div class="columns">
       <div class="column is-half is-offset-one-quarter box">
+        <div class="notification is-success add-team-notification">
+          Success! You added a player.
+        </div>
+
+        <div class="notification is-warning add-team-error-notification">
+          Sorry you are missing details, please fill out the <strong>entire</strong> form.
+        </div>
+
         <div class="field">
           <label class="label">Select Team</label>
           <p class="control">
             <span class="select is-medium">
-              <select>
-                <option>Highlander</option>
-                <option>Gem Stars</option>
-              </select>
+              <select class="select-teams"></select>
             </span>
           </p>
         </div>
         <div class="field">
           <label class="label">Email</label>
           <p class="control">
-            <input class="input is-medium" type="email" placeholder="Email" id="email">
+            <input class="input is-medium required" type="email" placeholder="Email" id="playerEmail">
           </p>
         </div>
           <div class="field">
             <label class="label">First Name</label>
             <p class="control">
-              <input class="input is-medium" type="text" placeholder="First Name" id="firstName">
+              <input class="input is-medium required" type="text" placeholder="First Name" id="firstName">
             </p>
           </div>
           <div class="field">
             <label class="label">Last Name</label>
             <p class="control">
-              <input class="input is-medium" type="text" placeholder="Last Name" id="lastName">
+              <input class="input is-medium required" type="text" placeholder="Last Name" id="lastName">
             </p>
           </div>
           <div class="field">
             <label class="label">Position</label>
             <p class="control">
-              <input class="input is-medium" type="text" placeholder="Position" id="Position">
+              <input class="input is-medium required" type="text" placeholder="Position" id="playerPosition">
             </p>
           </div>
           <div class="level">
             <span class="level-item has-text-centered">
-              <a class="button is-primary is-outlined" href="roster-list.html">
+              <a class="button is-primary is-outlined form-trigger-add-player">
                 Add New Player
               </a>
             </span>

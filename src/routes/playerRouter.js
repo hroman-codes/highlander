@@ -101,7 +101,7 @@ router.put('/:id', function(req, res) {
 
 // post new player
  router.post('/', function(req, res) {
-   const postParams = ['email', 'first_name', 'last_name'];
+   const postParams = ['email', 'first_name', 'last_name', 'position'];
    for (var i = 0; i < postParams.length; i++) {
      const confirmPostParams = postParams[i];
      if(!(confirmPostParams in req.body)) {
@@ -115,7 +115,8 @@ router.put('/:id', function(req, res) {
    .forge({
      email: req.body.email,
      first_name: req.body.first_name,
-     last_name: req.body.last_name
+     last_name: req.body.last_name,
+     position: req.body.position,
    })
    .save()
    .then(function(player) {
