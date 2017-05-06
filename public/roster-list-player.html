@@ -12,6 +12,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/roster-list-player.js"></script>
     <script src="js/edit-player.js"></script>
+    <script src="js/add-stats.js"></script>
+
   </head>
 <body>
     <!-- Navigation -->
@@ -82,8 +84,18 @@
                 </a>
             </span>
             <span class="level-item">
-                <a class="button is-primary is-outlined" id="myBtn">
+                <a class="button is-primary is-outlined" id="edit-player-button">
                   Edit Player
+                </a>
+            </span>
+            <span class="level-item">
+                <a class="button is-primary is-outlined" href="add-team.html">
+                  Add New Team
+                </a>
+            </span>
+            <span class="level-item">
+                <a class="button is-primary is-outlined add-new-stats-button">
+                  Add New Stats
                 </a>
             </span>
           </div>
@@ -140,7 +152,7 @@
           </div>
           <div class="level-right">
             <span class="level-item">
-              <a class="button is-primary is-outlined" href="stats.html">
+              <a class="button is-primary is-outlined add-new-stats-button">
                 Add New Stats
               </a>
             </span>
@@ -148,9 +160,6 @@
         </nav>
 
         <section>
-          <!-- <div class="notification has-text-centered add-team-message">
-            You dont have any teams.
-          </div> -->
 
           <table class="table">
             <thead>
@@ -177,7 +186,7 @@
         </section>
       </section>
 
-        <div class="modal modal-text-color">
+        <div class="modal modal-text-color edit-player-modal">
           <div class="modal-background"></div>
             <div class="modal-card">
               <header class="modal-card-head">
@@ -227,6 +236,55 @@
               </footer>
             </div>
           </div>
+
+          <!-- is-active -->
+          <div class="modal modal-text-color add-stat-modal">
+            <div class="modal-background"></div>
+              <div class="modal-card">
+                <header class="modal-card-head">
+                  <p class="modal-card-title">Add New Stats</p>
+                  <button class="delete"></button>
+                </header>
+                <section class="modal-card-body">
+                  <div class="notification is-success add-stat-notification">
+                    Success! You edited a player.
+                  </div>
+
+                  <div class="notification is-warning add-stat-error-notification">
+                    Sorry you are missing details, please fill out the form ENTIRELY!
+                  </div>
+
+                  <form action='/team-list.html' method="POST">
+                    <div class="field">
+                      <label class="label">Select Stat Category</label>
+                      <p class="control">
+                        <span class="select is-medium">
+                          <select class="stat-id">
+                            <option value="1">Hits</option>
+                            <option value="2">At Bats</option>
+                            <option value="3">Home Runs</option>
+                            <option value="4">Earned Runs</option>
+                            <option value="5">Innings Pitched</option>
+                            <option value="6">Strikeouts</option>
+                          </select>
+                        </span>
+                      </p>
+                    </div>
+                    <div class="field">
+                      <label class="label">How Many</label>
+                      <p class="control">
+                        <input class="input is-medium required" type="text" placeholder="How Many" id="howMany">
+                      </p>
+                    </div>
+                  </form>
+                </section>
+                <footer class="modal-card-foot">
+                  <button class="button is-primary is-outlined form-trigger-add-stat">
+                    Add Stat
+                  </button>
+                </footer>
+              </div>
+            </div>
       </div>
     </div>
   </div>

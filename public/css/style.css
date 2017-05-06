@@ -224,7 +224,9 @@ h1.title.coach-title.coach-heading-dashboard {
   Add-Team Dashboard
 ========================================= */
 .add-team-notification,
-.add-team-error-notification {
+.add-team-error-notification,
+.add-stat-error-notification,
+.add-stat-notification {
   display: none;
 }
 
