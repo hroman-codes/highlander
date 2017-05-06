@@ -82,34 +82,24 @@
 </div>
 </section>
 
-<section class="section">
+<section class="section add-stat-modal">
   <div class="container">
     <div class="columns">
       <div class="column is-half is-offset-one-quarter box">
+        <div class="notification is-success add-stat-notification">
+          Success! You added a player.
+        </div>
+
+        <div class="notification is-warning add-stat-error-notification">
+          Sorry you are missing details, please fill out the <strong>entire</strong> form.
+        </div>
+
+
         <div class="field">
           <label class="label">Select Player</label>
           <p class="control">
             <span class="select is-medium">
-              <select>
-                <option>Choose Player</option>
-                <option>Randy Brown</option>
-                <option>Heriberto Roman</option>
-                <option>Ricky Roman</option>
-                <option>Big Mac</option>
-              </select>
-            </span>
-          </p>
-        </div>
-        <div class="field">
-          <label class="label">Select Team</label>
-          <p class="control">
-            <span class="select is-medium">
-              <select>
-                <option>Choose Team</option>
-                <option>Highlanders</option>
-                <option>Gem Stars</option>
-                <option>Rockets</option>
-              </select>
+              <select class="select-players"></select>
             </span>
           </p>
         </div>
@@ -117,14 +107,13 @@
           <label class="label">Select Stat Category</label>
           <p class="control">
             <span class="select is-medium">
-              <select>
-                <option>Choose Stat</option>
-                <option>Hits</option>
-                <option>At Bats</option>
-                <option>Home Runs</option>
-                <option>Earned Runs</option>
-                <option>Innings Pitched</option>
-                <option>Strikeouts</option>
+              <select class="stat-id">
+                <option value="1">Hits</option>
+                <option value="2">At Bats</option>
+                <option value="3">Home Runs</option>
+                <option value="4">Earned Runs</option>
+                <option value="5">Innings Pitched</option>
+                <option value="6">Strikeouts</option>
               </select>
             </span>
           </p>
@@ -132,12 +121,12 @@
         <div class="field">
           <label class="label">How Many</label>
           <p class="control">
-            <input class="input is-medium" type="email" placeholder="How Many" id="howMany">
+            <input class="input is-medium required" type="email" placeholder="How Many" id="howMany">
           </p>
         </div>
           <div>
             <span class="level-item has-text-centered">
-              <a class="button is-primary is-outlined" href="roster-list.html">
+              <a class="button is-primary is-outlined form-trigger-add-stat">
                 Add New Stats
               </a>
             </span>
