@@ -7,8 +7,10 @@
     <title>Highlander</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
-    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/register.js"></script>
   </head>
 <body>
     <!-- Navigation -->
@@ -43,17 +45,23 @@
           </div>
     </nav>
 
-<section class="hero is-small login-bg-image">
+<section class="hero is-small login-bg-image register-player">
   <div class="hero-body">
     <div class="container">
       <div class="columns">
         <div class="column is-half is-offset-3">
         <h1 class="login-form-heading">Registration</h1>
           <div class="card is-half box">
+            <div class="notification is-success add-team-notification">
+              Success! You added a player.
+            </div>
+            <div class="notification is-warning add-team-error-notification">
+              Sorry you are missing details, please fill out the <strong>entire</strong> form.
+            </div>
             <div class="card-content">
               <div class="field">
                   <p class="control has-icon">
-                    <input class="input is-large" type="text" placeholder="First Name">
+                    <input class="input is-large required" type="text" placeholder="First Name" id="first_name">
                     <span class="icon is-medium">
                       <i class="fa fa-user-o"></i>
                     </span>
@@ -61,7 +69,7 @@
                 </div>
                 <div class="field">
                     <p class="control has-icon">
-                      <input class="input is-large" type="text" placeholder="Last Name">
+                      <input class="input is-large required" type="text" placeholder="Last Name" id="last_name">
                       <span class="icon is-medium">
                         <i class="fa fa-user-o"></i>
                       </span>
@@ -69,7 +77,7 @@
                   </div>
               <div class="field">
                   <p class="control has-icon">
-                    <input class="input is-large" type="email" placeholder="Email">
+                    <input class="input is-large required" type="email" placeholder="Email" id="email">
                     <span class="icon is-medium">
                       <i class="fa fa-envelope"></i>
                     </span>
@@ -77,24 +85,16 @@
                 </div>
                 <div class="field">
                   <p class="control has-icon">
-                    <input class="input is-large" type="password" placeholder="Password">
+                    <input class="input is-large required" type="password" placeholder="Password" id="password">
                     <span class="icon is-medium">
                       <i class="fa fa-lock"></i>
                     </span>
                   </p>
                 </div>
                 <div class="field">
-                    <p class="control">
-                      <label class="checkbox">
-                        <input type="checkbox">
-                        Remember me
-                      </label>
-                    </p>
-                </div>
-                <div class="field">
                   <p class="control">
-                    <button class="button is-success is-medium">
-                      Login
+                    <button class="button is-success is-medium register-button">
+                      Register
                     </button>
                   </p>
               </div>
