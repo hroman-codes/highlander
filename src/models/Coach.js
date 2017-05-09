@@ -14,11 +14,9 @@ const Coach = Bookshelf.Model.extend({
 {
   hashPassword: function(password) {
     let hashed = Bcrypt.hash(password, saltRounds)
-    console.log(hashed)
     return hashed
   },
-  validatePassword: function(plainTextPassword, hashedPassword) {
-    console.log(hashedPassword, plainTextPassword);
+  validatePassword: function(hashedPassword, plainTextPassword) {
     return Bcrypt.compare(plainTextPassword, hashedPassword)
   }
 });

@@ -11,7 +11,6 @@
      console.log('postData', postData)
 
      if ($('.required').val().length === 0) {
-       console.log('Nothing in First name')
        $('.add-team-error-notification').slideDown('fast')
        window.setTimeout(closeWarningMessage, 3000)
 
@@ -21,14 +20,14 @@
 
        return;
      } else {
-       var coachId = getParameterByName('id')
-      //  var coachId = localStorage.getItem('coachId')
        $.ajax({
          type: 'POST',
          url: 'http://localhost:8080/coaches',
          data: JSON.stringify(postData),
-         success: function() {
-          location.href = 'http://localhost:8080/dashboard.html?=' + coachId
+         success: function(response) {
+          console.log(response);
+          localStorage.setItem('coachId', response.id);
+          location.href = 'http://localhost:8080/dashboard.html';
          },
          fail: function() {
            alert('Create Coach function failed')

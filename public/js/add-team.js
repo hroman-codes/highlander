@@ -4,7 +4,8 @@ $(document).ready(function() {
     var postData = {
       teamName: $('#teamName').val(),
       cityLocation: $('#cityLocation').val(),
-      stateLocation: $('#stateLocation').val()
+      stateLocation: $('#stateLocation').val(),
+      coachId: localStorage.getItem('coachId')
     };
 
     if ( $('.required').val().length === 0) {
@@ -17,6 +18,7 @@ $(document).ready(function() {
 
       return;
     } else {
+
       $.ajax({
         type: 'POST',
         url: 'http://localhost:8080/teams/',

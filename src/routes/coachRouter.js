@@ -27,21 +27,22 @@ router.get('/:id', function(req, res) {
 })
 
 router.post('/login', function(req, res){
-  let coach;
+  let coachData;
   Coach
   .where({
     email: req.body.email
   })
   .fetch()
   .then(function(coach) {
-    coach = coach;
-    return Coach.validatePassword(coach.get('password'), req.body.password);
+    coachData = coach;
+    return Coach.validatePassword(coachData.get('password'), req.body.password);
   }).then(function(validPassword){
     if(validPassword){
-      return res.status(200).json(coach)
+      console.log(coachData)
+      res.status(200).json(coachData)
     } else {
       console.error('Wrong password')
-      return res.status(404).json('Wrong password')
+      res.status(404).json('Wrong password');
     }
   })
 })
