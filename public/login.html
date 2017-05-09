@@ -7,8 +7,10 @@
     <title>Highlander</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
-    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/login.js"></script>
   </head>
 <body>
     <!-- Navigation -->
@@ -39,17 +41,23 @@
           </div>
     </nav>
 
-<section class="hero is-small login-bg-image">
+<section class="hero is-small login-bg-image login-player">
   <div class="hero-body">
     <div class="container">
       <div class="columns">
         <div class="column is-half is-offset-3">
         <h1 class="login-form-heading">Login</h1>
           <div class="card is-small box">
+            <div class="notification is-success add-team-notification">
+              Success! You added a player.
+            </div>
+            <div class="notification is-warning add-team-error-notification">
+              Sorry you are missing details, please fill out the <strong>entire</strong> form.
+            </div>
             <div class="card-content">
               <div class="field">
                   <p class="control has-icon">
-                    <input class="input is-large" type="email" placeholder="Email">
+                    <input class="input is-large" type="email" placeholder="Email" id="email">
                     <span class="icon is-medium">
                       <i class="fa fa-envelope"></i>
                     </span>
@@ -57,23 +65,15 @@
                 </div>
                 <div class="field">
                   <p class="control has-icon">
-                    <input class="input is-large" type="password" placeholder="Password">
+                    <input class="input is-large required" type="password" placeholder="Password" id="password">
                     <span class="icon is-medium">
                       <i class="fa fa-lock"></i>
                     </span>
                   </p>
                 </div>
                 <div class="field">
-                    <p class="control">
-                      <label class="checkbox">
-                        <input type="checkbox">
-                        Remember me
-                      </label>
-                    </p>
-                </div>
-                <div class="field">
                   <p class="control">
-                    <button class="button is-success is-medium">
+                    <button class="button is-success is-medium login-button">
                       Login
                     </button>
                   </p>
@@ -82,9 +82,7 @@
             <div class="has-text-centered">
               <p>
                 <a href="login.html" class="loginCookies">Login</a> |
-                <a href="register.html" class="loginCookies">Register an Account</a> |
-                <a href="#" class="loginCookies">Forgot Password</a>  |
-                <a href="#" class="loginCookies">Need Help</a>
+                <a href="register.html" class="loginCookies">Register an Account</a>
               </p>
             </div>
           </div>

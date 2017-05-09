@@ -6,6 +6,7 @@ const jsonParser = bodyParser.json();
 
 const Team = require('../models/Team');
 const Player = require('../models/Player');
+const Coaches = require('../models/Coach');
 
 router.use(bodyParser.urlencoded({extended: true}));
 router.use(jsonParser);
@@ -79,6 +80,7 @@ router.post('/', function(req, res) {
   })
   .save()
   .then(function(team) {
+  team.coach().attach(req.body.coachId)
     return res.status(200).json(team);
   })
   .catch(function(err) {
