@@ -22,7 +22,6 @@ $(document).ready(function () {
      var mergedListPlayers = []
      data.teams.map(function(team){
 
-       console.log(team)
        var players = team.players
 
        players.map(function(player){
