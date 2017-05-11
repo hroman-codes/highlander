@@ -106,4 +106,33 @@ router.post('/', function(req, res) {
   })
 })
 
+// delete a player <================= come back to this getting the error
+// Unhandled rejection error: update or delete on table "players" violates
+// foreign key constraint "teams_players_player_id_foreign" on table "teams_players"
+//
+//  router.delete('/:id', function(req, res) {
+//    const deleteParams = ['id']
+//    for(var i = 0; i < deleteParams.length; i++) {
+//      const wrongId = deleteParams[i];
+//      console.log(':: wrong id is here =====> ::', wrongId)
+//      if(!(wrongId in req.params)){
+//        const errorMessage = `Sorry your missing ${wrongId} please try again`
+//        console.error(errorMessage);
+//        return res.status(400).send(errorMessage);
+//      }
+//    }
+//
+//    Player
+//    .where({
+//      id: parseInt(req.params.id)
+//    })
+//    .fetch()
+//    .then(function(player){
+//      return player.destroy();
+//    })
+//    .then(function (player){
+//      return res.status(200).end()
+//    })
+// })
+
 module.exports = router;
