@@ -21,19 +21,13 @@
             </a>
           </div>
 
-            <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
-            <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
-          <span class="nav-toggle">
+          <span id="nav-toggle" class="nav-toggle toggle-hamburger-placement" onclick="document.getElementById('nav-menu').classList.toggle('is-active');">
             <span></span>
             <span></span>
             <span></span>
           </span>
 
-          <div class="nav-right nav-menu">
-            <!-- <a class="nav-item is-tab nav-color">
-              <i class="fa fa-paper-plane-o icon the-shit" aria-hidden="true"></i>
-              Contact
-            </a> -->
+          <div class="nav-right nav-menu" id="nav-menu">
             <a class="nav-item is-tab nav-color" href="register.html">
               <i class="fa fa-user-o icon the-shit" aria-hidden="true"></i>
               Sign Up

@@ -1,5 +1,15 @@
 $(document).ready(function () {
+
+  var toggle = $('#nav-toggle');
+  var menu = $('#nav-menu'); 
+
+  $(toggle).click(function() {
+    $(this).toggleClass('is-active');
+    $(menu).toggleCLass('is-active');
+  })
+
   var coachId = localStorage.getItem('coachId'); //getParameterByName('coachId');
+  if(!coachId) location.href= 'http://localhost:8080/login.html';
    $.get('http://localhost:8080/coaches/' + coachId, function(data) {
      var listTeams = data.teams.map(function(team){
      var listTeam = $('<li class="panel-heading">')
