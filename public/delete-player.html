@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/team-list.js"></script>
+    <script src="js/add-stats.js"></script>
     <script src="js/delete-team.js"></script>
   </head>
 <body>
@@ -65,28 +65,49 @@
             <div class="level-item">
               <p>
                 <span class="title is-bold profile-title">
-                  Team List
+                  Delete a Team
                 </span>
               </p>
             </div>
           </div>
-          <div class="level-right">
-            <span class="level-item">
-              <a class="button is-primary is-outlined" href="add-team.html">
-                Add a New Team
-              </a>
-            </span>
-          </div>
-
         </nav>
       </div>
     </div>
 </div>
 </section>
 
-<section>
-  <div class="notification has-text-centered teams-list-notification content"></div>
-  <div class="columns is-gapless team-list-details-page blockElement"></div>
+<section class="section add-stat-modal">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-half is-offset-one-quarter box">
+        <div class="notification is-success add-stat-notification">
+          Success! You added a player.
+        </div>
+
+        <div class="notification is-warning add-stat-error-notification">
+          Sorry you are missing details, please fill out the <strong>entire</strong> form.
+        </div>
+
+
+        <div class="field">
+          <label class="label">Select Team</label>
+          <p class="control">
+            <span class="select is-medium">
+              <select class="select-team"></select>
+            </span>
+          </p>
+        </div>
+
+          <div>
+            <span class="level-item has-text-centered">
+              <a class="button is-primary is-outlined form-trigger-delete-team">
+                Delete Player
+              </a>
+            </span>
+          </div>
+      </div>
+    </div>
+  </div>
 </section>
   </body>
 </html>

@@ -11,7 +11,6 @@ $(document).ready(function() {
     success: function(data) {
       $('.select-players').empty();
       var teams = data.teams.map(function(team) {
-        console.log('team data', team)
         var players = team.players
         thePlayers = players.map(function(dataPlayer, index) {
 
