@@ -1,18 +1,8 @@
 $(document).ready(function() {
+
   $('.addPlayerButton').on('click', function() {
     $('.add-player-modal').addClass('is-active').fadeIn('slow')
   })
-
-  // $.ajax({
-  //   type: 'GET',
-  //   url: 'http://localhost:8080/teams',
-  //   success: function(data) {
-  //     var options = data.map(function(team, index){
-  //       return '<option value="'+team.id+'">'+team.name+'</option>';
-  //     });
-  //     $('.select-teams').html(options);
-  //   }
-  // })
 
   $('.form-trigger-add-player').on('click', function(e) {
     e.preventDefault()

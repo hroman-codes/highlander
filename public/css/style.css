@@ -265,6 +265,11 @@ h1.title.coach-title.coach-heading-dashboard {
   display: true;
 }
 
+
+
+
+
+
 /* ======================================
   MediaQuery Styles
 ========================================= */
@@ -295,6 +300,10 @@ h1.title.coach-title.coach-heading-dashboard {
     width: 50%;
     float: left;
     display: block;
+  }
+
+  .nav-toggle {
+
   }
 }
 

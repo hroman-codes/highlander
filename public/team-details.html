@@ -23,17 +23,13 @@
         </a>
       </div>
 
-        <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
-        <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
-      <span class="nav-toggle toggle-hamburger-placement">
+      <span id="nav-toggle" class="nav-toggle toggle-hamburger-placement" onclick="document.getElementById('nav-menu').classList.toggle('is-active');">
         <span></span>
         <span></span>
         <span></span>
       </span>
 
-        <!-- This "nav-menu" is hidden on mobile -->
-        <!-- Add the modifier "is-active" to display it on mobile -->
-        <div class="nav-right nav-menu">
+        <div class="nav-right nav-menu" id="nav-menu">
           <a class="nav-item nav-color is-tab" href="dashboard.html">
             <i class="fa fa-home icon the-shit" aria-hidden="true"></i>
             Dashboard
