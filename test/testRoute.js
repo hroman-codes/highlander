@@ -5,7 +5,7 @@ const should = chai.should();
 
 chai.use(chaiHttp);
 
-const app = require('../src/server');
+const {app} = require('../src/server');
 
 describe('root html test', function() {
 
