@@ -17,8 +17,6 @@ app.use('/teams', teamRouter);
 app.use('/stats', statRouter);
 app.use('/stats',playerRouter);
 
-
-
 let server;
 
 function runServer() {
