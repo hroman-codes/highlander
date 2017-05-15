@@ -40,13 +40,7 @@ module.exports = {
   production: {
     client: 'pg',
     connection: {
-      user: 'dgeblrjcmnovie',
-      password: '99a1fcce2305b622eab57f7d7dc5a022da3dc7f802d736cc3b4dcff24f75ebee',
-      // database: '@ec2-23-23-223-2.compute-1.amazonaws.com:5432/d1dmfln8ki4jln' + '?ssl=true'
-      // database: '@ec2-23-23-223-2.compute-1.amazonaws.com:5432/d1dmfln8ki4jln'
-      host: 'ec2-23-23-223-2.compute-1.amazonaws.com:5432',
-      database: 'd1dmfln8ki4jln',
-      ssl: true
+      database: 'postgres://dgeblrjcmnovie:99a1fcce2305b622eab57f7d7dc5a022da3dc7f802d736cc3b4dcff24f75ebee@ec2-23-23-223-2.compute-1.amazonaws.com:5432/d1dmfln8ki4jln'
     },
     pool: {
       min: 2,
