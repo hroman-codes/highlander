@@ -9,9 +9,10 @@ module.exports = {
     //   password: 'bananabanana99',
     //   charset: 'utf8'
     // },
-    connection: {
-      database: DATABASE_URL
-    },
+    // connection: {
+    //   database: DATABASE_URL
+    // },
+    connection: DATABASE_URL,
     migrations: {
       directory: 'data/migrations'
     },

@@ -1,5 +1,5 @@
 APP_URL = 'https://pacific-wildwood-70161.herokuapp.com/'
- 
+
  $(document).ready(function() {
    $('.register-button').on('click', function(e){
      e.preventDefault()
