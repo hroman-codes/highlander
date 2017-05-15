@@ -1,3 +1,5 @@
+APP_URL = 'https://pacific-wildwood-70161.herokuapp.com/'
+
 $(document).ready(function() {
   $('#edit-player-button').on('click', function() {
     $('.edit-player-modal').addClass('is-active').fadeIn('slow')
@@ -26,7 +28,7 @@ $(document).ready(function() {
     var playerId = getParameterByName('id')
     $.ajax({
       type: 'PUT',
-      url: 'http://localhost:8080/players/' + playerId,
+      url: APP_URL + 'players/' + playerId,
       data: JSON.stringify(postData),
       success: function(data){
         $('.add-team-notification').slideDown('fast')

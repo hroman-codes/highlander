@@ -1,4 +1,4 @@
-DATABASE_URL = 'postgres://dgeblrjcmnovie:99a1fcce2305b622eab57f7d7dc5a022da3dc7f802d736cc3b4dcff24f75ebee@ec2-23-23-223-2.compute-1.amazonaws.com:5432/d1dmfln8ki4jln'?ssl=true''
+DATABASE_URL = 'postgres://dgeblrjcmnovie:99a1fcce2305b622eab57f7d7dc5a022da3dc7f802d736cc3b4dcff24f75ebee@ec2-23-23-223-2.compute-1.amazonaws.com:5432/d1dmfln8ki4jln?ssl=true'
 
 module.exports = {
   development: {

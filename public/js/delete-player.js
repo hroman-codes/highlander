@@ -1,10 +1,12 @@
+APP_URL = 'https://pacific-wildwood-70161.herokuapp.com/' 
+
 $(document).ready(function() {
   console.log('I am ready to delete a team')
 
   var coachId = localStorage.getItem('coachId')
   $.ajax({
     type: 'GET',
-    url: 'http://localhost:8080/coaches/' + coachId,
+    url: APP_URL + 'coaches/' + coachId,
     success: function(data) {
       console.log(data)
       var coachDetails = data.teams.map(function(team) {
@@ -36,7 +38,7 @@ $(document).ready(function() {
     var coachId = localStorage.getItem('coachId');
     $.ajax({
       type: 'DELETE',
-      url: 'http://localhost:8080/players/' + playerId,
+      url: APP_URL + 'players/' + playerId,
       success: function() {
         console.log('Hello we got to the success call back')
         location.href = 'http://localhost:8080/dashboard.html?id=' + coachId;

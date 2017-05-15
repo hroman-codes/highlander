@@ -1,6 +1,8 @@
+APP_URL = 'https://pacific-wildwood-70161.herokuapp.com/'
+
 $(document).ready(function () {
   var teamId = getParameterByName('id');
-      $.get('http://localhost:8080/teams/' + teamId, function(data) {
+      $.get(APP_URL + 'teams/' + teamId, function(data) { 
         console.log(data);
           var listItems = data.players.map(function(player) {
           var listItem = $('<li>');

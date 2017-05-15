@@ -1,4 +1,6 @@
-var state = {
+APP_URL = 'https://pacific-wildwood-70161.herokuapp.com/'
+
+var state = { 
   playerId: null,
   teams: [],
   player: null,
@@ -14,10 +16,10 @@ var state = {
 
 $(document).ready(function () {
   var playerId = getParameterByName('id')
-  $.get('http://localhost:8080/players/' + playerId, function(data) {
+  $.get(APP_URL +'players/' + playerId, function(data) {
     state.teams = data.teams;
     state.player = data;
-    $.get('http://localhost:8080/players/' + playerId + '/stats', function(data) {
+    $.get(APP_URL 'players/' + playerId + '/stats', function(data) {
       data.stats.map(function(stat){
         state.stats[stat.catalog.description] = stat.how_many;
       });
@@ -34,7 +36,7 @@ function render(){
     })
     var linkTeam = $('<a>', {
       text: team.name,
-      href: 'http://localhost:8080/team-details.html?id=' + team.id
+      href: APP_URL + 'team-details.html?id=' + team.id
     })
     listTeam.append(linkTeam)
 

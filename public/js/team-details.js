@@ -1,3 +1,4 @@
+APP_URL = 'https://pacific-wildwood-70161.herokuapp.com/'
 // single state object
  var state = {
   teamId: null,
@@ -13,7 +14,7 @@
  var teamId = getParameterByName('id');
  $(document).ready(function() {
    $('.team-details-notification').text('......Loading').show();
-   $.get('http://localhost:8080/teams/' + teamId, function(data) {
+   $.get(APP_URL + 'teams/' + teamId, function(data) {
      state.team.city = data.city
      state.team.state = data.state
      state.team.name = data.name
@@ -82,7 +83,7 @@ function render() {
 
     var viewPlayerFooterLink = $('<a>', {
       text: 'View Player Details',
-      href: 'http://localhost:8080/roster-list-player.html?id=' + dataPlayers.id
+      href: APP_URL + 'roster-list-player.html?id=' + dataPlayers.id
     })
 
     // append card content

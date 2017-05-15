@@ -1,3 +1,5 @@
+APP_URL = 'https://pacific-wildwood-70161.herokuapp.com/'
+
 var state = {
   teams: [],
 }
@@ -5,7 +7,7 @@ var state = {
 var coachId = localStorage.getItem('coachId')
 $(document).ready(function () {
   $('.teams-list-notification').text('......Loading').show()
-   $.get('http://localhost:8080/coaches/' + coachId, function(data) {
+   $.get(APP_URL + 'coaches/' + coachId, function(data) {
      state.teams = data.teams
   $('.teams-list-notification').text(' ').hide()
     render()
@@ -66,7 +68,7 @@ $(document).ready(function () {
 
         var viewPlayerFooterLink = $('<a>', {
           text: 'View Player Details',
-          href: 'http://localhost:8080/roster-list-player.html?id=' + playerData.id
+          href: APP_URL + 'roster-list-player.html?id=' + playerData.id
         })
 
         // append card content

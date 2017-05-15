@@ -1,7 +1,9 @@
+APP_URL = 'https://pacific-wildwood-70161.herokuapp.com/' 
+
 $(document).ready(function () {
 
   var toggle = $('#nav-toggle');
-  var menu = $('#nav-menu'); 
+  var menu = $('#nav-menu');
 
   $(toggle).click(function() {
     $(this).toggleClass('is-active');
@@ -9,13 +11,13 @@ $(document).ready(function () {
   })
 
   var coachId = localStorage.getItem('coachId'); //getParameterByName('coachId');
-  if(!coachId) location.href= 'http://localhost:8080/login.html';
-   $.get('http://localhost:8080/coaches/' + coachId, function(data) {
+  if(!coachId) location.href= APP_URL + 'login.html';
+   $.get(APP_URL + 'coaches/' + coachId, function(data) {
      var listTeams = data.teams.map(function(team){
      var listTeam = $('<li class="panel-heading">')
      var linkTeam = $('<a>', {
          text: team.name,
-         href: 'http://localhost:8080/team-details.html?id='+ team.id
+         href: APP_URL + 'team-details.html?id='+ team.id
        })
        listTeam.append(linkTeam)
 
@@ -66,7 +68,7 @@ $(document).ready(function () {
 
          var editPlayerFooterLink = $('<a>', {
            text: 'View Player Details',
-           href: 'http://localhost:8080/roster-list-player.html?id=' + player.id
+           href: APP_URL + 'roster-list-player.html?id=' + player.id
          })
 
          // append card content

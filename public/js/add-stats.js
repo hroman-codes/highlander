@@ -1,3 +1,5 @@
+APP_URL = 'https://pacific-wildwood-70161.herokuapp.com/' 
+
 $(document).ready(function() {
   $('.add-new-stats-button').on('click', function() {
     $('.add-stat-modal').addClass('is-active').fadeIn('slow')
@@ -7,7 +9,7 @@ $(document).ready(function() {
   var thePlayers;
   $.ajax({
     type: 'GET',
-    url: 'http://localhost:8080/coaches/' + coachId,
+    url:  APP_URL + 'coaches/' + coachId,
     success: function(data) {
       $('.select-players').empty();
       var teams = data.teams.map(function(team) {
@@ -46,7 +48,7 @@ $(document).ready(function() {
         var statId = $('.stat-id').val();
         $.ajax({
           type: 'POST',
-          url: 'http://localhost:8080/players/' + playerId + '/stats/' + statId,
+          url: APP_URL + 'players/' + playerId + '/stats/' + statId,
           data: JSON.stringify(postData),
           success: function(){
             $('.add-stat-notification').slideDown('fast')
@@ -58,7 +60,7 @@ $(document).ready(function() {
             window.setTimeout(reload, 3000)
 
             function reload() {
-              location.href = 'http://localhost:8080/roster-list-player.html?id=' + playerId;
+              location.href = APP_URL + 'roster-list-player.html?id=' + playerId;
             }
           },
           fail: function() {

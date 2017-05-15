@@ -1,4 +1,6 @@
-$(document).ready(function() {
+APP_URL = 'https://pacific-wildwood-70161.herokuapp.com/'
+
+$(document).ready(function() { 
   $('.login-button').on('click', function(e){
     e.preventDefault()
     const postData = {
@@ -20,12 +22,12 @@ $(document).ready(function() {
     } else {
       $.ajax({
         type: 'POST',
-        url: 'http://localhost:8080/coaches/login',
+        url: APP_URL + 'coaches/login',
         data: JSON.stringify(postData),
         success: function(response) {
             console.log(response)
             localStorage.setItem('coachId', response.id)
-            location.href = 'http://localhost:8080/dashboard.html'
+            location.href = APP_URL + 'dashboard.html'
         },
         error: function() {
           alert('Wrong password please try again')

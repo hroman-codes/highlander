@@ -1,3 +1,5 @@
+APP_URL = 'https://pacific-wildwood-70161.herokuapp.com/'
+ 
  $(document).ready(function() {
    $('.register-button').on('click', function(e){
      e.preventDefault()
@@ -22,12 +24,12 @@
      } else {
        $.ajax({
          type: 'POST',
-         url: 'http://localhost:8080/coaches',
+         url: APP_URL + 'coaches',
          data: JSON.stringify(postData),
          success: function(response) {
           console.log(response);
           localStorage.setItem('coachId', response.id);
-          location.href = 'http://localhost:8080/dashboard.html';
+          location.href = APP_URL + 'dashboard.html';
          },
          fail: function() {
            alert('Create Coach function failed')

@@ -1,3 +1,5 @@
+APP_URL = 'https://pacific-wildwood-70161.herokuapp.com/' 
+
 $(document).ready(function() {
 
   $('.addPlayerButton').on('click', function() {
@@ -26,7 +28,7 @@ $(document).ready(function() {
       var coachId = getParameterByName('id') || $('.select-teams').val();
       $.ajax({
         type: 'POST',
-        url:'http://localhost:8080/teams/' + teamId + '/player/',
+        url: APP_URL + teamId + '/player/',
         data: JSON.stringify(postData),
         success: function(data) {
           $('.add-team-notification').slideDown('fast')
@@ -38,7 +40,7 @@ $(document).ready(function() {
           window.setTimeout(reload, 3000)
 
           function reload() {
-            location.href = 'http://localhost:8080/dashbaord.html?=' + coachId
+            location.href = APP_URL + 'dashbaord.html?=' + coachId
           }
         },
         fail: function() {
