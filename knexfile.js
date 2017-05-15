@@ -1,4 +1,4 @@
-DATABASE_URL = 'postgres://dgeblrjcmnovie:99a1fcce2305b622eab57f7d7dc5a022da3dc7f802d736cc3b4dcff24f75ebee@ec2-23-23-223-2.compute-1.amazonaws.com:5432/d1dmfln8ki4jln'
+DATABASE_URL = '@ec2-23-23-223-2.compute-1.amazonaws.com:5432/d1dmfln8ki4jln'
 
 module.exports = {
   development: {
@@ -42,7 +42,7 @@ module.exports = {
   production: {
     client: 'postgresql',
     connection: {
-      database: DATABASE_URL,
+      database: DATABASE_URL + '?ssl=true',
       user: 'dgeblrjcmnovie',
       password: '99a1fcce2305b622eab57f7d7dc5a022da3dc7f802d736cc3b4dcff24f75ebee'
     },
@@ -54,7 +54,7 @@ module.exports = {
       directory: 'data/migrations',
       tableName: 'knex_migrations'
     },
-    // ssl: true,
+    ssl: true,
     seeds: {
       directory: 'data/seeds'
     }

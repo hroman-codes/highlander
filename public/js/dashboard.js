@@ -1,4 +1,4 @@
-APP_URL = 'https://pacific-wildwood-70161.herokuapp.com/' 
+var APP_URL = 'https://pacific-wildwood-70161.herokuapp.com/'
 
 $(document).ready(function () {
 
