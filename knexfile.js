@@ -1,3 +1,5 @@
+console.log(process.env.HEROKU_POSTGRESQL_ONYX_URL);
+
 module.exports = {
   development: {
     client: 'postgresql',
