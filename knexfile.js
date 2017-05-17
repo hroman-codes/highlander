@@ -1,5 +1,3 @@
-console.log(process.env.HEROKU_POSTGRESQL_ONYX_URL);
-
 module.exports = {
   development: {
     client: 'postgresql',
@@ -41,9 +39,7 @@ module.exports = {
 
   production: {
     client: 'pg',
-    connection: {
-      database: process.env.HEROKU_POSTGRESQL_ONYX_URL
-    },
+    connection: process.env.HEROKU_POSTGRESQL_ONYX_URL,
     pool: {
       min: 2,
       max: 10
