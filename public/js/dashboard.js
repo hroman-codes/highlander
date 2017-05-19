@@ -10,7 +10,7 @@ $(document).ready(function () {
     $(menu).toggleCLass('is-active');
   })
 
-  var coachId = localStorage.getItem('coachId'); //getParameterByName('coachId');
+  var coachId = localStorage.getItem('coachId');
   if(!coachId) location.href= APP_URL + 'login.html';
    $.get(APP_URL + 'coaches/' + coachId, function(data) {
      var listTeams = data.teams.map(function(team){

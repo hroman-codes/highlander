@@ -8,14 +8,14 @@ Link: https://highlandersport.herokuapp.com/index.html
 A simple app for coaches to manage their teams stats, averages, trash talk conversations, and poach players from other teams.
 
 Current MVP version omits :no_entry_sign:: </br>
-Poaching power :punch: </br>
-Player averages :bar_chart: </br>
-Trash talk <iframe src="https://giphy.com/embed/26ufiJHeVVO0NemgE" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/southparkgifs-26ufiJHeVVO0NemgE"></a></p></br>
+- Poaching power :punch: </br>
+- Player averages :bar_chart: </br>
+- Trash talk  :speak_no_evil:
 
 Want to keep up with the development and roadmap of Highlander?  https://trello.com/b/p1gqbNtQ/thinkful-capstone-highlander
 
 ## Screenshots
-![main page](/public/assets/img/highlander_logo.pn)
+![main page](/public/assets/img/highlander_home.png)
 
 ### Main Page
 
