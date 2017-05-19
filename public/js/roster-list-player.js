@@ -19,7 +19,7 @@ $(document).ready(function () {
   $.get(APP_URL +'players/' + playerId, function(data) {
     state.teams = data.teams;
     state.player = data;
-    $.get(APP_URL 'players/' + playerId + '/stats', function(data) {
+    $.get(APP_URL + 'players/' + playerId + '/stats', function(data) {
       data.stats.map(function(stat){
         state.stats[stat.catalog.description] = stat.how_many;
       });
