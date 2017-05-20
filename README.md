@@ -17,94 +17,127 @@ Want to keep up with the development and roadmap of Highlander?  https://trello.
 ## Screenshots
 ![main page](/public/assets/img/highlander_home.png)
 
-### Main Page
+### Dashboard
+![dashboard](/public/assets/img/highlander_dashboard.png)
 
-![main page](/public/assets/img/highlander_logo.pn)
+### Add a Team
 
-### User List
+![add team](/public/assets/img/highlander_addteam.png)
 
-![user list](/client/assets/userList.png)
+### View List of Teams
 
-### New List
+![list of teams](/public/assets/img/highlander_listofteams.png)
 
-![new list](/client/assets/newList.png)
+### Add Player
 
-### Search to Add Items
+![add players](/public/assets/img/highlander_addplayers.png)
 
-![search](/client/assets/addItems.png)
+### Add Stat
+
+![add stat](/public/assets/img/highlander_addstat.png)
 
 ## Tech Stack
 
 - DB: cloud-hosted PostgreSQL instance
 
-- Server: Node, Express, Knex
+- Server: Node, Express, Morgan, Knex, Bookshelf, Bcrypt
 
-- Client: React, Redux, Thunk
-
-## Component Locations
-
+- Client: jQuery, HTML, CSS, Bulma
 
 # Database Structure
+http://dbpatterns.com/documents/58c5ff7f1514b438af1a805e/
 
 ## Tables
-#### `shows`
- id  | title | path, etc.
-:---:|:------|:----------:
-123 | _Star Wars_ | `/123456.jpg`
-124 | _Empire Strikes Back_ | `/123457.jpg`
+#### `coaches`
+ id  | email | first_name | last_name
+:---:|:------|:----------:| :----------:
+123 | isaac@gmail.com | Isaac | Brewman
+124 | danny@yahoo.com | Danny | Guach
 
-#### `list_items`
-listID | movieId | watched
-:-----:| :-----: | :---:
-1  | 123 | true
-1  | 124 | true
-2  | 123 | false
+#### `coaches_teams`
+coach_id | team_id
+:-----:|:-----:
+1  | 3
+2  | 1
+1 | 1
 
-#### `lists`
-ListID | ListName
+#### `teams`
+id | name | city | state
+-----|:-----:|:-----:|
+1 | Highlander | Bronx | NY
+2 | Braves | Brooklyn | NY
+3 | Brew Crew | Queens | NY
+
+#### `teams_players`
+team_id | player_id
 -----|:-----:
-1 | Cartoons
-2 | Sci-Fi
+1 | 4
+2 | 2
+3 | 7
+
+#### `players`
+id | first_name | last_name | email | password | position
+-----|:-----:|:-----:||:-----:||:-----:||:-----:|
+1 | Ricardo | Roman | romanR@gmail.com | Bcrypt(hash) | 2nd base
+2 | Randy | Brown | brown@yahoo.com | Bcrypt(hash) | Catcher
+3 | Big | Mac | BG@yahoo.com | Bcrypt(hash) | 3rd base
+
+#### `stats`
+player_id | stat_catalog_id | how_many
+-----|:-----:|:-----:|
+1 | 4 | 56
+2 | 2 | 3  
+3 | 6 | 24
+
+#### `stat_catalogs`
+id | description
+-----|:-----:
+1 | Hits
+2 | At Bats
+3 | Home Runs
+4 | Earned Runs
+5 | Innings Pitched
+6 | Strikeouts
+
 
 ---
 
 ## Endpoints:
 
-- [x] app.get('/lists')
-  - returns a list of names and their ids
+#### `coach`
 
-- [x] app.get('/lists/:listId')
-  - returns a list of movies on specified list
+- [x] router.get('/')
+- [x] router.get('/:id')
 
-- [x] app.post('/lists/:name')
-  - creates a new list
-  - response: `{ listId: 12345, name: "Star Wars Collection" }`
+- [x] router.post('/')
 
-- [x] app.post('lists/:listId/show')
-  - body: movie / season / episode
-  - add to movies table only if not already in it
-  - in all cases, add movie.id / listId to ListContent table
+- [x] router.post('/login')
 
-- [x] app.post('lists/:listname')
-  - create new list
-  - res: {id, name}
+- [x] router.put('/:id')
 
-- [x] app.post('episodes/:listId/:showId/:seasonId')
+#### `player`
 
-- [x] app.delete('/lists/:listId')
-  - deletes the whole list
-  - first delete matching `list_content` rows
-  - then delete list from `lists`
+- [x] router.get('/')
+- [x] router.get('/:id')
+- [x] router.get('/:id/stats')
 
-- [x] app.delete('lists/:listId/:id')
-  - deletes item off of list and its children off the list
-  - (get the ids of all items that need to be deleted,
-  - THEN delete from listTable)
+- [x] router.post('/')
 
-- [x] app.put('/lists/:listId')
-  - res: {name: listname}
-  - change list name, return {listid: id, name: listname}
+- [x] router.post('/:player_id/stats/:stat_catalog_id')
 
-- [x] app.put('/lists/:listId')
-  - body: {watched: true/false}
-  - change whether show is marked as watched
+- [x] router.put('/:player_id/stats/:stat_catalog_id')
+
+#### `team`
+
+- [x] router.get('/')
+- [x] router.get('/:id')
+
+- [x] router.post('/')
+- [x] router.post('/:id/player')
+
+- [x] router.put('/:id')
+
+#### `stat`
+
+- [x] router.get('/')
+- [x] router.get('/:id')
