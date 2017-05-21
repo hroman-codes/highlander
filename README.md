@@ -63,7 +63,7 @@ coach_id | team_id
 
 #### `teams`
 id | name | city | state
-:-----|:-----:|:-----:
+:-----|:-----:|:-----:|:-----:
 1 | Highlander | Bronx | NY
 2 | Braves | Brooklyn | NY
 3 | Brew Crew | Queens | NY
