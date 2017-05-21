@@ -77,14 +77,14 @@ team_id | player_id
 
 #### `players`
 id | first_name | last_name | email | password | position
------|:-----:|:-----:||:-----:||:-----:||:-----:|
+:-----|:-----:|:-----:|:-----:|:-----:|:-----:
 1 | Ricardo | Roman | romanR@gmail.com | Bcrypt(hash) | 2nd base
 2 | Randy | Brown | brown@yahoo.com | Bcrypt(hash) | Catcher
 3 | Big | Mac | BG@yahoo.com | Bcrypt(hash) | 3rd base
 
 #### `stats`
 player_id | stat_catalog_id | how_many
------|:-----:|:-----:|
+-----|:-----:|:-----:
 1 | 4 | 56
 2 | 2 | 3  
 3 | 6 | 24
