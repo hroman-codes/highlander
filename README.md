@@ -5,7 +5,7 @@
 Link: https://highlandersport.herokuapp.com/index.html
 
 ## Description
-A simple app for coaches to manage their teams stats, averages, trash talk conversations, and poach players from other teams.
+A simple app for coaches to manage their teams stats, averages, trash talk, and poach players from other teams.
 
 Current MVP version omits :no_entry_sign:: </br>
 - Poaching power :punch: </br>
