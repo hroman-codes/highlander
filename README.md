@@ -47,6 +47,8 @@ Want to keep up with the development and roadmap of Highlander?  https://trello.
 # Database Structure
 http://dbpatterns.com/documents/58c5ff7f1514b438af1a805e/
 
+![db patterns schema](/public/assets/img/dbpatterns.png)
+
 ## Tables
 #### `coaches`
  id  | email | first_name | last_name
