@@ -1,5 +1,5 @@
 ![Highlander](/public/assets/img/highlander_logo.png)
-[![Build Status](https://travis-ci.org/iamromanh/highlander.svg?branch=master)](https://travis-ci.org/iamromanh/highlander)
+[![Build Status](https://travis-ci.org/getromandev/highlander.svg?branch=master)](https://travis-ci.org/iamromanh/highlander)
 
 ## Live Demo
 Link: https://highlandersport.herokuapp.com/index.html
