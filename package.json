@@ -24,7 +24,7 @@
     "morgan": "^1.10.0",
     "pg": "^6.4.2",
     "sqlite": "^2.3.0",
-    "sqlite3": "^3.1.8"
+    "sqlite3": "^5.1.6"
   },
   "devDependencies": {
     "chai": "^3.5.0",
