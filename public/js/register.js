@@ -10,8 +10,6 @@ var APP_URL = 'https://highlandersportjquery.herokuapp.com/'
        password: $('#password').val()
      }
 
-     console.log('postData', postData)
-
      if ($('.required').val().length === 0) {
        $('.add-team-error-notification').slideDown('fast')
        window.setTimeout(closeWarningMessage, 3000)
