@@ -1,4 +1,4 @@
-var APP_URL = 'https://highlandersport.herokuapp.com/'
+var APP_URL = 'https://highlandersportjquery.herokuapp.com/'
 // single state object
  var state = {
   teamId: null,

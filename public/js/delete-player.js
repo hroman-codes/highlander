@@ -1,4 +1,4 @@
-var APP_URL = 'https://highlandersport.herokuapp.com/'
+var APP_URL = 'https://highlandersportjquery.herokuapp.com/'
 
 $(document).ready(function() {
   console.log('I am ready to delete a team')
