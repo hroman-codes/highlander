@@ -1,4 +1,4 @@
-var APP_URL = 'https://highlandersportjquery.herokuapp.com/'
+var APP_URL = 'http://localhost:8080/'
 
  $(document).ready(function() {
    $('.register-button').on('click', function(e){
